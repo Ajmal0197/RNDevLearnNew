@@ -1,0 +1,27 @@
+{
+  "jailBreaker": {
+    "gotIt": "Got it!",
+    "hasJailBreaker": "App can’t run because this device has Jailbreak"
+  },
+  "validation": {
+    "validEmail": "Please enter valid email",
+    "requiredEmail": "Email address is required",
+    "passwordMinLength": "Password must be at least",
+    "characters": "characters",
+    "requiredPassword": "Password is required",
+    "passwordNotMatch": "Passwords do not match",
+    "requiredConfPassword": "Confirm password is required",
+    "requiredTnC": "You must accept the terms and conditions",
+    "validNumber": "Please enter valid number",
+    "numberRequired": "Mobile number is required",
+    "numberlength": "Minimum 9 digits are required",
+    "fullNameLength": "Minimum 3 char is required",
+    "fullNameRequired": "Full name is required",
+    "validName": "Please enter valid name.",
+    "maxNumberlength": "Maximum 9 digits are allowed",
+    "budgetRequired": "Budget is required",
+    "validBudget": "Please enter valid budget amount",
+    "validCr": "CR Number verification failed. Please try again.",
+    "validRegaAdv": "REGA verification failed. Please try again."
+  }
+}

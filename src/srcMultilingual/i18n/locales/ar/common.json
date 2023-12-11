@@ -1,0 +1,27 @@
+{
+  "jailBreaker": {
+    "gotIt": "Got it!",
+    "hasJailBreaker": "App can’t run because this device has Jailbreak"
+  },
+  "validation": {
+    "validEmail": "يرجى ادخال بريد الكتروني صحيح",
+    "requiredEmail": "حقل البريد الالكتروني مطلوب",
+    "passwordMinLength": "كلمة المرور يحب أن تكون ",
+    "characters": "خانات",
+    "requiredPassword": "كلمة المرور مطلوبة",
+    "passwordNotMatch": "كلمة المرور غير مطابقة",
+    "requiredConfPassword": "تأكيد كلمة المرور مطلوبة",
+    "requiredTnC": "يجب الموافقة على الشروط والأحكام",
+    "validNumber": "يرجى ادخال رقم جوال صحيح",
+    "numberRequired": "رقم الجوال مطلوب",
+    "numberlength": "الحد الأدنى المطلوب هو 9 أرقام",
+    "fullNameLength": "الحد الأدنى المطلوب هو 3 خانات",
+    "fullNameRequired": "الاسم مطلوب",
+    "validName": "الرجاء ادخال اسم صحيح",
+    "maxNumberlength": "الحد الاقصى هو 9 أرقام",
+    "budgetRequired": "الميزانية مطلوبة",
+    "validBudget": "الرجاء إدخال مبلغ ميزانية صالح",
+    "validCr": "فشل التحقق من رقم التسجيل التجاري، يرجى إعادة المحاولة.",
+    "validRegaAdv": "فشل التحقق عبر الهيئة العامة للعقار، يرجى إعادة المحاولة."
+  }
+}

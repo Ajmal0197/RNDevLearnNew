@@ -1,0 +1,22 @@
+{
+  "userProfile": {
+    "welcomeText": "Welcome here! {{name}}"
+  },
+  "accountHome": {
+    "info": "Personal information",
+    "edit": "Edit",
+    "name": "Full name",
+    "phone": "Phone number",
+    "email": "Email address",
+    "settings": "Personal settings",
+    "saved": "Saved properties default view:",
+    "logout": "Log out",
+    "idno": "ID Number",
+    "first": "First name",
+    "father": "Father's name",
+    "grandf": "Grandfather's name",
+    "family": "Family name",
+    "save": "Save",
+    "logOut": "Log Out"
+  }
+}
