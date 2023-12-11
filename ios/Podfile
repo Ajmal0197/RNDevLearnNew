@@ -25,8 +25,18 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
+use_modular_headers!
+
 target 'RNDevLearnNew' do
   config = use_native_modules!
+
+  # firebase
+    # Your other pod dependencies
+    pod 'FirebaseCoreInternal'
+    pod 'FirebaseSessions'
+  
+    $RNFirebaseAnalyticsWithoutAdIdSupport=true
+  # firebase
 
   use_react_native!(
     :path => config[:reactNativePath],
@@ -34,7 +44,7 @@ target 'RNDevLearnNew' do
     #
     # Note that if you have use_frameworks! enabled, Flipper will not work and
     # you should disable the next line.
-    :flipper_configuration => flipper_config,
+    # :flipper_configuration => flipper_config,
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )

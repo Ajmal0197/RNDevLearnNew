@@ -1,6 +1,6 @@
 #import "AppDelegate.h"
 #import "RNBootSplash.h" // ⬅️ add the header import
-
+#import <React/RCTLinkingManager.h> // ⬅️ add the header import deplink
 #import <React/RCTBundleURLProvider.h>
 
 @implementation AppDelegate
@@ -11,6 +11,7 @@
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
+  [FIRApp configure];
 
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
@@ -29,6 +30,13 @@
 #endif
 }
 
+// Add this inside `@implementation AppDelegate` above `@end` DEEPLINK:
+- (BOOL)application:(UIApplication *)application
+   openURL:(NSURL *)url
+   options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+  return [RCTLinkingManager application:application openURL:url options:options];
+}
 
 // ⬇️ Add this before file @end
 - (UIView *)createRootViewWithBridge:(RCTBridge *)bridge
