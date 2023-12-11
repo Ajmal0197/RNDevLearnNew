@@ -1,79 +1,56 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+1. React native redux toolkit with thunk, persist, reactotron.(srcReduxToolkit)
+   https://user-images.githubusercontent.com/13982255/216835343-c8e161ac-cad6-4810-8a59-f107f4f89e2b.png
 
-# Getting Started
+2. App performance coding.(srcAppPerformance)
+   https://user-images.githubusercontent.com/13982255/216835357-7ab060af-7cd2-4fe6-abe6-06ad5cda06f6.png
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+3. React native dynamic multiple text input with add/remove functionality.
+   https://user-images.githubusercontent.com/13982255/216835364-0542ac12-4884-4db6-98a6-ea1a3c330e91.png
 
-## Step 1: Start the Metro Server
+4. React Native Shared Elements Using Reanimated 3
+   https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/70b21f12-3d6f-4c8d-a152-c1b73cc0dd5c
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+5. Multilingual App using (i18n-js, react-native-localize, react-native-restart,)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+   a) Arabic/English support
 
-```bash
-# using npm
-npm start
+   b) User selected language persist
 
-# OR using Yarn
-yarn start
-```
+   c) Global moment config as per language
 
-## Step 2: Start your Application
+-> https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/37ec341c-bfb1-422e-95c1-180955627e2e
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+-> https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/04bc4a2c-5535-4592-8320-823fb4c06cd8
 
-### For Android
+7. Theming(Dark/Light mode), Custom Fonts added, also font helper added
 
-```bash
-# using npm
-npm run android
+-> https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/a585f60a-91d4-43a7-bd4c-cdd59bcbb985
 
-# OR using Yarn
-yarn android
-```
+-> https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/af847edf-cc34-4436-94a6-8ffa100f30cb
 
-### For iOS
+8. Eslint Prettier configuration(Airbnb style)
 
-```bash
-# using npm
-npm run ios
+Follow:
+https://dev.to/ajmal_hasan/eslint-prettier-configuration-react-nativeairbnb-style-3mao
 
-# OR using Yarn
-yarn ios
-```
+9. React native markdown display(https://www.npmjs.com/package/react-native-markdown-display):
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/e85d737b-54c9-4771-a1a2-89431ff8c796
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/6212480d-cee6-43c5-9027-079124f44dd4
 
-## Step 3: Modifying your App
+10. Using SVG image, lottie files in react native, configurations and usage:
 
-Now that you have successfully run the app, let's modify it.
+https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/103313f4-7213-469f-8a53-bd61b1aef013
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+11. React Native Gifted Chat with custom components:
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/0b1099a7-9a20-470a-a06c-d05b3d345469
 
-## Congratulations! :tada:
+12. Deeplinking Usaga and configuration:
 
-You've successfully run and modified your React Native App. :partying_face:
+https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/21102ba3-15ea-426c-86c8-258857e977a9
 
-### Now what?
+13. React native multiple environment setup and flavouring using React native config.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/8efabb93-0b3f-4484-8a07-282066ef9f2c
