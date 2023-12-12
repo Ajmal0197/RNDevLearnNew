@@ -14,13 +14,13 @@ import notifee, { EventType } from '@notifee/react-native';
 // import App from './src/srcDynamicTextInput';
 // import App from './src/srcSharedElementReanimated/App';
 // import App from './src/srcMultilingual/App';
-import App from './src/srcThemeingAndNetInfo/App';
+// import App from './src/srcThemeingAndNetInfo/App';
 // import App from './src/srcSvg/App';
 // import App from './src/srcSvgAndLottie/App';
 // import App from './src/srcRNGiftedChat/App';
 // import App from './src/srcLinkingDeeplinking/App';
 // import App from './src/srcReduxToolkit/App';
-// import App from './src/srcFirebase/App';
+import App from './src/srcFirebase/App';
 
 // 1---
 // notifee.onBackgroundEvent(async ({ type, detail }) => {
