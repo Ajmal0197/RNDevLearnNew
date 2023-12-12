@@ -7,7 +7,6 @@ import { PERMISSIONS, request } from 'react-native-permissions';
 export const getFcmToken = async () => {
   let token = null;
   await checkApplicationNotificationPermission();
-  // await registerAppWithFCM()
   try {
     token = await messaging().getToken();
     console.log('getFcmToken-->', token);
@@ -16,39 +15,6 @@ export const getFcmToken = async () => {
   }
   return token;
 };
-
-// method was called on  user register with firebase FCM for notification
-// export async function registerAppWithFCM() {
-//   console.log('registerAppWithFCM status', messaging().isDeviceRegisteredForRemoteMessages);
-//   if (!messaging().isDeviceRegisteredForRemoteMessages) {
-//     await messaging()
-//       .registerDeviceForRemoteMessages()
-//       .then((status) => {
-//         console.log('registerDeviceForRemoteMessages status', status);
-//       })
-//       .catch((error) => {
-//         console.log('registerDeviceForRemoteMessages error ', error);
-//       });
-//   }
-// }
-
-// method was called on un register the user from firebase for stoping receiving notifications
-export async function unRegisterAppWithFCM() {
-  console.log('unRegisterAppWithFCM status', messaging().isDeviceRegisteredForRemoteMessages);
-
-  if (messaging().isDeviceRegisteredForRemoteMessages) {
-    await messaging()
-      .unregisterDeviceForRemoteMessages()
-      .then((status) => {
-        console.log('unregisterDeviceForRemoteMessages status', status);
-      })
-      .catch((error) => {
-        console.log('unregisterDeviceForRemoteMessages error ', error);
-      });
-  }
-  await messaging().deleteToken();
-  console.log('unRegisterAppWithFCM status', messaging().isDeviceRegisteredForRemoteMessages);
-}
 
 export const checkApplicationNotificationPermission = async () => {
   const authStatus = await messaging().requestPermission();
@@ -99,34 +65,16 @@ export function registerListenerWithFCM() {
     }
   });
 
-  getInitialNotificationNotifee();
-
-  // Note: If you use @notifee/react-native, since v7.0.0, onNotificationOpenedApp and getInitialNotification will no longer trigger as notifee will handle the event.
-  messaging().onNotificationOpenedApp(async (remoteMessage) => {
-    console.log('onNotificationOpenedApp Received', JSON.stringify(remoteMessage));
-    // if (remoteMessage?.data?.clickAction) {
-    //   onNotificationClickActionHandling(remoteMessage.data.clickAction);
-    // }
-  });
   // Check whether an initial notification is available
   messaging()
     .getInitialNotification()
     .then((remoteMessage) => {
       if (remoteMessage) {
-        console.log('Notification caused app to open from quit state:', remoteMessage.notification);
+        console.log('Notification caused app to open from quit state:', remoteMessage);
       }
     });
 
   return unsubscribe;
-}
-
-// App open events
-async function getInitialNotificationNotifee() {
-  const initialNotification = await notifee.getInitialNotification();
-
-  if (initialNotification) {
-    console.log('Notification caused application to open', initialNotification.notification);
-  }
 }
 
 // method was called to display notification
