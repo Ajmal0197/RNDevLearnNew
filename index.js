@@ -4,7 +4,7 @@
 
 import { AppRegistry } from 'react-native';
 import { name as appName } from './app.json';
-import notifee, { EventType } from '@notifee/react-native';
+// import notifee, { EventType } from '@notifee/react-native';
 // import messaging from '@react-native-firebase/messaging'
 
 // import App from './src/srcReduxToolkit/App';
@@ -20,7 +20,8 @@ import notifee, { EventType } from '@notifee/react-native';
 // import App from './src/srcRNGiftedChat/App';
 // import App from './src/srcLinkingDeeplinking/App';
 // import App from './src/srcReduxToolkit/App';
-import App from './src/srcFirebase/App';
+// import App from './src/srcFirebase/App';
+import App from './src/srcMultipleEnvConfig/App';
 
 // 1---
 // notifee.onBackgroundEvent(async ({ type, detail }) => {

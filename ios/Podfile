@@ -34,6 +34,9 @@ setup_permissions([
   # 'StoreKit',
 ])
 
+platform :ios, min_ios_version_supported
+prepare_react_native_project!
+
 flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
 
 linkage = ENV['USE_FRAMEWORKS']
@@ -54,7 +57,13 @@ target 'RNDevLearnNew' do
   
     $RNFirebaseAnalyticsWithoutAdIdSupport=true
   # firebase
-
+  
+  # react-native-config
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+  # For extensions without React dependencies
+  pod 'react-native-config/Extension', :path => '../node_modules/react-native-config'
+  # react-native-config
+  
   use_react_native!(
     :path => config[:reactNativePath],
     # Enables Flipper.
