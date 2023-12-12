@@ -2,8 +2,8 @@
 // FOR ANDROID -> https://nawfalhaddi.github.io/react-native-template-by-nh/docs/basic-setup/setup-env/
 // FOR IOS from point 5-8 -> https://medium.com/@sathishkcontact/managing-multiple-environments-in-react-native-android-ios-scripts-for-different-builds-ea4c5bff6782
 
-// FOR RUNNING APP *****
-// Terminate bundler -> start again new clean bundler -> then run the schema/ios
+// FOR RUNNING APP DO (primarily iOS) *****
+// yarn killAllBundler -> yarn cleanCache -> yarn ios:dev
 
 import React, { useEffect } from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Text, View, useColorScheme } from 'react-native';
