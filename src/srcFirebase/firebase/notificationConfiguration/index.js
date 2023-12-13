@@ -3,7 +3,7 @@ import messaging from '@react-native-firebase/messaging';
 import { Alert, Linking, Platform } from 'react-native';
 import { PERMISSIONS, request } from 'react-native-permissions';
 
-// method was called to get FCM tiken for notification
+// method was called to get FCM token for notification
 export const getFcmToken = async () => {
   let token = null;
   await checkApplicationNotificationPermission();
