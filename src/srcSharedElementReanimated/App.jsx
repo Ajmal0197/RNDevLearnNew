@@ -1,13 +1,13 @@
-import React from 'react';
-import Navigator from './routes';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+// REF: https://blog.logrocket.com/using-react-native-reanimated-seamless-ui-transitions/
 
-const App = () => {
-  return (
-    <SafeAreaProvider>
-      <Navigator />
-    </SafeAreaProvider>
-  );
-};
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Navigator from './routes';
+
+const App = () => (
+  <SafeAreaProvider>
+    <Navigator />
+  </SafeAreaProvider>
+);
 
 export default App;

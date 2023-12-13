@@ -1,2 +1,2 @@
-APP_CONFIG=development
-API_URL=https:/$()/myapi.development.com
+APP_CONFIG=staging
+API_URL=https:/$()/myapi.staging.com

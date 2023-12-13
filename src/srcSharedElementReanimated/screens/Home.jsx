@@ -26,7 +26,7 @@ const Home = () => {
             data={data}
             renderItem={({ item, index }) => <RenderItem item={item} index={index} />}
             showsVerticalScrollIndicator={false}
-            estimatedItemSize={200}
+            estimatedItemSize={200} // estimatedItemSize prop to provide an estimated size for the items in the list. This helps the FlatList optimize the rendering process, especially when dealing with a large number of items.
           />
         ) : (
           <FlatList
