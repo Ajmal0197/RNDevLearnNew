@@ -1196,6 +1196,8 @@ PODS:
     - RNFBApp
   - RNFlashList (1.6.3):
     - React-Core
+  - RNKeychain (8.1.2):
+    - React-Core
   - RNLocalize (3.0.4):
     - React-Core
   - RNNotifee (7.8.0):
@@ -1288,6 +1290,7 @@ DEPENDENCIES:
   - "RNFBCrashlytics (from `../node_modules/@react-native-firebase/crashlytics`)"
   - "RNFBMessaging (from `../node_modules/@react-native-firebase/messaging`)"
   - "RNFlashList (from `../node_modules/@shopify/flash-list`)"
+  - RNKeychain (from `../node_modules/react-native-keychain`)
   - RNLocalize (from `../node_modules/react-native-localize`)
   - "RNNotifee (from `../node_modules/@notifee/react-native`)"
   - RNPermissions (from `../node_modules/react-native-permissions`)
@@ -1446,6 +1449,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-firebase/messaging"
   RNFlashList:
     :path: "../node_modules/@shopify/flash-list"
+  RNKeychain:
+    :path: "../node_modules/react-native-keychain"
   RNLocalize:
     :path: "../node_modules/react-native-localize"
   RNNotifee:
@@ -1544,6 +1549,7 @@ SPEC CHECKSUMS:
   RNFBCrashlytics: 99236f5d414db702746256f07206a118ac1a247b
   RNFBMessaging: b6477fef1db57c6ff4516ee28094ad916b5a5a90
   RNFlashList: 4b4b6b093afc0df60ae08f9cbf6ccd4c836c667a
+  RNKeychain: a65256b6ca6ba6976132cc4124b238a5b13b3d9c
   RNLocalize: 1ce4263770515f53d3de442ce7657b3661b16a37
   RNNotifee: f3c01b391dd8e98e67f539f9a35a9cbcd3bae744
   RNPermissions: 45db85c67c48c74c0a392c2d7b8f92d76ab277e4
