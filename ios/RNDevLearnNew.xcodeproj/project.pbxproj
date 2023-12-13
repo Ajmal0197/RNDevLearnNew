@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00974310FFB102D9046A1FB3 /* Pods_RNDevLearnNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 986244494FCAC8E63B546E25 /* Pods_RNDevLearnNew.framework */; };
 		00E356F31AD99517003FC87E /* RNDevLearnNewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNDevLearnNewTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-RNDevLearnNew.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-RNDevLearnNew.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-RNDevLearnNew-RNDevLearnNewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNDevLearnNew-RNDevLearnNewTests.a */; };
+		54C3B350CAD15D8377D2E198 /* Pods_RNDevLearnNew_RNDevLearnNewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F087C972D7A660B28DF5C8 /* Pods_RNDevLearnNew_RNDevLearnNewTests.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A1940FAB2B27727C002A3F4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1940FAA2B27727C002A3F4E /* GoogleService-Info.plist */; };
 		A1F7E1FE2B275302006268C0 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F7E1FD2B275302006268C0 /* BootSplash.storyboard */; };
@@ -38,13 +38,13 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RNDevLearnNew/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNDevLearnNew/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNDevLearnNew/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNDevLearnNew-RNDevLearnNewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNDevLearnNew-RNDevLearnNewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-RNDevLearnNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDevLearnNew.debug.xcconfig"; path = "Target Support Files/Pods-RNDevLearnNew/Pods-RNDevLearnNew.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-RNDevLearnNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDevLearnNew.release.xcconfig"; path = "Target Support Files/Pods-RNDevLearnNew/Pods-RNDevLearnNew.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-RNDevLearnNew-RNDevLearnNewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDevLearnNew-RNDevLearnNewTests.debug.xcconfig"; path = "Target Support Files/Pods-RNDevLearnNew-RNDevLearnNewTests/Pods-RNDevLearnNew-RNDevLearnNewTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-RNDevLearnNew.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNDevLearnNew.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F087C972D7A660B28DF5C8 /* Pods_RNDevLearnNew_RNDevLearnNewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNDevLearnNew_RNDevLearnNewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNDevLearnNew/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-RNDevLearnNew-RNDevLearnNewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDevLearnNew-RNDevLearnNewTests.release.xcconfig"; path = "Target Support Files/Pods-RNDevLearnNew-RNDevLearnNewTests/Pods-RNDevLearnNew-RNDevLearnNewTests.release.xcconfig"; sourceTree = "<group>"; };
+		986244494FCAC8E63B546E25 /* Pods_RNDevLearnNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNDevLearnNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1940FAA2B27727C002A3F4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A1E5F0322B285C0F0012FC7A /* RNDevLearnNew.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = RNDevLearnNew.entitlements; path = RNDevLearnNew/RNDevLearnNew.entitlements; sourceTree = "<group>"; };
 		A1F7E1FD2B275302006268C0 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = RNDevLearnNew/BootSplash.storyboard; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-RNDevLearnNew-RNDevLearnNewTests.a in Frameworks */,
+				54C3B350CAD15D8377D2E198 /* Pods_RNDevLearnNew_RNDevLearnNewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-RNDevLearnNew.a in Frameworks */,
+				00974310FFB102D9046A1FB3 /* Pods_RNDevLearnNew.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,8 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-RNDevLearnNew.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNDevLearnNew-RNDevLearnNewTests.a */,
+				986244494FCAC8E63B546E25 /* Pods_RNDevLearnNew.framework */,
+				63F087C972D7A660B28DF5C8 /* Pods_RNDevLearnNew_RNDevLearnNewTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -601,6 +601,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -674,6 +685,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,

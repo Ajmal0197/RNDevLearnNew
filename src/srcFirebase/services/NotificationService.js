@@ -70,7 +70,7 @@ export function registerListenerWithFCM() {
     .getInitialNotification()
     .then((remoteMessage) => {
       if (remoteMessage) {
-        console.log('Notification caused app to open from quit state:', remoteMessage);
+        console.log('Notification caused app to open from quit/background state:', remoteMessage);
       }
     });
 

@@ -45,6 +45,10 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
+# Add the following lines for Firebase Static Frameworks
+use_frameworks! :linkage => :static
+$RNFirebaseAsStaticFramework = true
+
 use_modular_headers!
 
 target 'RNDevLearnNew' do

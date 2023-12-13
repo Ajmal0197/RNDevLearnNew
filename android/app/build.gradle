@@ -120,7 +120,7 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
 
-//firebase
+        //firebase
             /* Add the firebaseCrashlytics extension (by default,
             * it's disabled to improve build speeds) and set
             * nativeSymbolUploadEnabled to true along with a pointer to native libs. */
