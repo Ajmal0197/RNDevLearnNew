@@ -60,3 +60,5 @@ https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/8efabb93-0b3f-4484-8a0
 15. Biometric Authentication using reat-native-keychain
 
 16. Reels/Tiktok using react native video
+
+17. Bottomsheet using reanimated 3, gesture handler.
