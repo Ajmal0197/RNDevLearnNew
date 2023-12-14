@@ -1,5 +1,5 @@
 import { View, StyleSheet, FlatList } from 'react-native';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import BootSplash from 'react-native-bootsplash';
 import { FlashList } from '@shopify/flash-list';
 import VideoPost from './components/VideoPost';
@@ -48,14 +48,17 @@ const FeedScreen = () => {
     fetchPosts();
   }, []);
 
+  const onViewableItemsChanged = useCallback(({ viewableItems }) => {
+    const firstViewableItem = viewableItems[0];
+    if (firstViewableItem && firstViewableItem.isViewable) {
+      setActivePostId(firstViewableItem.item.id);
+    }
+  }, []);
+
   const viewabilityConfigCallbackPairs = useRef([
     {
       viewabilityConfig: { itemVisiblePercentThreshold: 50 },
-      onViewableItemsChanged: ({ changed, viewableItems }) => {
-        if (viewableItems.length > 0 && viewableItems[0].isViewable) {
-          setActivePostId(viewableItems[0].item.id);
-        }
-      },
+      onViewableItemsChanged,
     },
   ]);
 
