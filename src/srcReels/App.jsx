@@ -1,8 +1,8 @@
 import { View, StyleSheet, FlatList } from 'react-native';
 import React, { useEffect, useRef, useState } from 'react';
-import VideoPost from './components/VideoPost';
 import BootSplash from 'react-native-bootsplash';
 import { FlashList } from '@shopify/flash-list';
+import VideoPost from './components/VideoPost';
 
 const dummyPosts = [
   {
@@ -36,7 +36,6 @@ const FeedScreen = () => {
   const flatListRef = useRef();
   const [activePostId, setActivePostId] = useState(dummyPosts[0].id);
   const [posts, setPosts] = useState([]);
-  const [currentIndex, setcurrentIndex] = useState(0);
 
   useEffect(() => {
     BootSplash.hide();
@@ -55,7 +54,6 @@ const FeedScreen = () => {
       onViewableItemsChanged: ({ changed, viewableItems }) => {
         if (viewableItems.length > 0 && viewableItems[0].isViewable) {
           setActivePostId(viewableItems[0].item.id);
-          setcurrentIndex(viewableItems[0].index);
         }
       },
     },
