@@ -48,17 +48,15 @@ const FeedScreen = () => {
     fetchPosts();
   }, []);
 
-  const onViewableItemsChanged = ({ viewableItems }) => {
-    const firstViewableItem = viewableItems[0];
-    if (firstViewableItem && firstViewableItem.isViewable) {
-      setActivePostId(firstViewableItem?.index);
-    }
-  };
-
   const viewabilityConfigCallbackPairs = useRef([
     {
       viewabilityConfig: { itemVisiblePercentThreshold: 50 },
-      onViewableItemsChanged,
+      onViewableItemsChanged: ({ changed, viewableItems }) => {
+        console.log('viewableItemsviewableItems', viewableItems);
+        if (viewableItems.length > 0 && viewableItems[0].isViewable) {
+          setActivePostId(viewableItems[0]?.index);
+        }
+      },
     },
   ]);
 
