@@ -1,11 +1,4 @@
-import {
-  StyleSheet,
-  SafeAreaView,
-  Platform,
-  StatusBar,
-  View,
-  Text,
-} from 'react-native';
+import { StyleSheet, SafeAreaView, Platform, StatusBar, View, Text } from 'react-native';
 import React from 'react';
 import CustomImageCarousal from './src/components/CustomImageCarousal';
 
@@ -42,11 +35,11 @@ const App = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.carouselContainer}>
         <Text style={styles.text}>Image Carousel Square</Text>
-        <CustomImageCarousal data={data} autoPlay={true} pagination={true} />
+        <CustomImageCarousal data={data} autoPlay pagination />
       </View>
       <View style={styles.carouselContainer}>
         <Text style={styles.text}>Image Carousel Landscape</Text>
-        <CustomImageCarousal data={data2} autoPlay={true} pagination={true} />
+        <CustomImageCarousal data={data2} autoPlay pagination />
       </View>
     </SafeAreaView>
   );
@@ -60,7 +53,7 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     backgroundColor: 'white',
   },
-  text: {textAlign: 'center', color: 'black', marginBottom: 10},
+  text: { textAlign: 'center', color: 'black', marginBottom: 10 },
   carouselContainer: {
     marginBottom: 20,
   },

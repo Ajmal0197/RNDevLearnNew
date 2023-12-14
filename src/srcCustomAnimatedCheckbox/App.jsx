@@ -1,5 +1,5 @@
-import {StyleSheet, Text, View, TouchableWithoutFeedback} from 'react-native';
-import React, {useState} from 'react';
+import { StyleSheet, Text, View, TouchableWithoutFeedback } from 'react-native';
+import React, { useState } from 'react';
 import CustomCheckBox from './src/components/CustomCheckBox';
 
 const App = () => {
@@ -27,17 +27,18 @@ const App = () => {
           style={styles.marginBottom}
           onPress={() => {
             handleCheckboxPress();
-          }}>
+          }}
+        >
           <View>
             <CustomCheckBox
               width={50}
               height={50}
               checked={checked}
-              checkMarkColor={'white'}
-              checkedBorderColor={'#FFA901'}
-              unCheckedBorderColor={'#D9D9D9'}
-              checkedBackgroundColor={'#FFA901'}
-              unCheckedBackgroundColor={'white'}
+              checkMarkColor="white"
+              checkedBorderColor="#FFA901"
+              unCheckedBorderColor="#D9D9D9"
+              checkedBackgroundColor="#FFA901"
+              unCheckedBackgroundColor="white"
             />
           </View>
         </TouchableWithoutFeedback>
@@ -46,17 +47,18 @@ const App = () => {
         <TouchableWithoutFeedback
           onPress={() => {
             handleCheckboxPress2();
-          }}>
+          }}
+        >
           <View>
             <CustomCheckBox
               width={50}
               height={50}
               checked={checked2}
-              checkMarkColor={'white'}
-              checkedBorderColor={'#378BA4'}
-              unCheckedBorderColor={'#81BECE'}
-              checkedBackgroundColor={'#378BA4'}
-              unCheckedBackgroundColor={'#E8EDE7'}
+              checkMarkColor="white"
+              checkedBorderColor="#378BA4"
+              unCheckedBorderColor="#81BECE"
+              checkedBackgroundColor="#378BA4"
+              unCheckedBackgroundColor="#E8EDE7"
             />
           </View>
         </TouchableWithoutFeedback>
@@ -65,17 +67,18 @@ const App = () => {
         <TouchableWithoutFeedback
           onPress={() => {
             handleCheckboxPress3();
-          }}>
+          }}
+        >
           <View>
             <CustomCheckBox
               width={50}
               height={50}
               checked={checked3}
-              checkMarkColor={'white'}
-              checkedBorderColor={'#107980'}
-              unCheckedBorderColor={'#76A1A7'}
-              checkedBackgroundColor={'#107980'}
-              unCheckedBackgroundColor={'#EDE1CF'}
+              checkMarkColor="white"
+              checkedBorderColor="#107980"
+              unCheckedBorderColor="#76A1A7"
+              checkedBackgroundColor="#107980"
+              unCheckedBackgroundColor="#EDE1CF"
             />
           </View>
         </TouchableWithoutFeedback>
@@ -84,17 +87,18 @@ const App = () => {
         <TouchableWithoutFeedback
           onPress={() => {
             handleCheckboxPress4();
-          }}>
+          }}
+        >
           <View>
             <CustomCheckBox
               width={50}
               height={50}
               checked={checked4}
-              checkMarkColor={'white'}
-              checkedBorderColor={'#796EA8'}
-              unCheckedBorderColor={'#A6A9C8'}
-              checkedBackgroundColor={'#796EA8'}
-              unCheckedBackgroundColor={'#D3D9E9'}
+              checkMarkColor="white"
+              checkedBorderColor="#796EA8"
+              unCheckedBorderColor="#A6A9C8"
+              checkedBackgroundColor="#796EA8"
+              unCheckedBackgroundColor="#D3D9E9"
             />
           </View>
         </TouchableWithoutFeedback>

@@ -64,7 +64,7 @@ const BottomSheetScreenScroll = () => {
             renderItem={({item, index}) => {
               return <RenderItem item={item} key={index} />;
             }}
-            snapTo={'50%'}
+            snapTo={'80%'}
             backgroundColor={'white'}
             backDropColor={'black'}
           />

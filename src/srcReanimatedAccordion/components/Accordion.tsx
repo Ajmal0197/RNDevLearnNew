@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#E3EDFB',
     marginHorizontal: 10,
     marginVertical: 10,
-    borderRadius: 14,
+    borderRadius: 10,
     borderWidth: 1,
     borderColor: '#0F56B3',
     overflow: 'hidden',
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   titleContainer: {
-    padding: 20,
+    padding: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

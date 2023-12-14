@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {DrawerListType} from '../data/data';
 
@@ -8,10 +8,10 @@ type Props = {
 
 const DrawerItem = ({item}: Props) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity onPress={()=>alert(item.name)} style={styles.container}>
       <Image source={item.icon} style={styles.image} />
       <Text style={styles.text}>{item.name}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

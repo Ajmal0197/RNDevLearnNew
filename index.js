@@ -1,15 +1,9 @@
-/**
- * @format
- */
-
 import { AppRegistry } from 'react-native';
 import { name as appName } from './app.json';
 import notifee, { EventType } from '@notifee/react-native';
 import messaging from '@react-native-firebase/messaging';
 import 'react-native-gesture-handler';
 import BootSplash from 'react-native-bootsplash';
-
-BootSplash.hide();
 
 // import App from './src/srcReduxToolkit/App';
 // import App from './src/srcAppPerformance/reactMemo';
@@ -39,7 +33,11 @@ BootSplash.hide();
 // import App from './src/srcCustomToast/App';
 // import App from './src/srcStackCarousel/App';
 // import App from './src/srcFloatingActionButton/App';
-import App from './src/srcCustomDrawer/App';
+// import App from './src/srcCustomDrawer/App';
+// import App from './src/srcReanimatedModal/App';
+// import App from './src/srcReanimatedModal/App';
+// import App from './src/srcReanimatedProgressBarLine/App';
+import App from './src/srcCustomButton/App';
 
 // 1---
 // notifee.onBackgroundEvent(async ({ type, detail }) => {
@@ -57,5 +55,7 @@ import App from './src/srcCustomDrawer/App';
 messaging().setBackgroundMessageHandler(async (remoteMessage) => {
   console.log('setBackgroundMessageHandler1', JSON.stringify(remoteMessage));
 });
+
+BootSplash.hide();
 
 AppRegistry.registerComponent(appName, () => App);
