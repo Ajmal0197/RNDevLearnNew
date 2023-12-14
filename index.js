@@ -6,6 +6,7 @@ import { AppRegistry } from 'react-native';
 import { name as appName } from './app.json';
 import notifee, { EventType } from '@notifee/react-native';
 import messaging from '@react-native-firebase/messaging';
+import 'react-native-gesture-handler';
 
 // import App from './src/srcReduxToolkit/App';
 // import App from './src/srcAppPerformance/reactMemo';
@@ -23,7 +24,8 @@ import messaging from '@react-native-firebase/messaging';
 // import App from './src/srcFirebase/App';
 // import App from './src/srcMultipleEnvConfig/App';
 // import App from './src/srcRNKeychainBiometric/App';
-import App from './src/srcReels/App';
+// import App from './src/srcReels/App';
+import App from './src/srcReanimatedBottomSheet/App';
 
 // 1---
 // notifee.onBackgroundEvent(async ({ type, detail }) => {
