@@ -11,7 +11,7 @@ const VideoPost = ({ post, activePostId, index = 0 }) => {
   const [isPlaying, setIsPlaying] = useState(true);
   const { height } = useWindowDimensions();
 
-  console.log('VideoPostVideoPost', isPlaying, activePostId, index, activePostId === index);
+  // console.log('VideoPostVideoPost', isPlaying, activePostId, index, activePostId === index);
 
   return (
     <View style={[styles.container, { height }]}>

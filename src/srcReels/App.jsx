@@ -48,12 +48,12 @@ const FeedScreen = () => {
     fetchPosts();
   }, []);
 
-  const onViewableItemsChanged = useCallback(({ viewableItems }) => {
+  const onViewableItemsChanged = ({ viewableItems }) => {
     const firstViewableItem = viewableItems[0];
     if (firstViewableItem && firstViewableItem.isViewable) {
       setActivePostId(firstViewableItem?.index);
     }
-  }, []);
+  };
 
   const viewabilityConfigCallbackPairs = useRef([
     {
