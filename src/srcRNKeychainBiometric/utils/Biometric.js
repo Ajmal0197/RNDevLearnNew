@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import * as Keychain from 'react-native-keychain';
 
 // Function to check if biometric authentication is supported

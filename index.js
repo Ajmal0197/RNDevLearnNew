@@ -22,7 +22,8 @@ import messaging from '@react-native-firebase/messaging';
 // import App from './src/srcReduxToolkit/App';
 // import App from './src/srcFirebase/App';
 // import App from './src/srcMultipleEnvConfig/App';
-import App from './src/srcRNKeychainBiometric/App';
+// import App from './src/srcRNKeychainBiometric/App';
+import App from './src/srcReels/App';
 
 // 1---
 // notifee.onBackgroundEvent(async ({ type, detail }) => {

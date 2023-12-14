@@ -1004,6 +1004,11 @@ PODS:
     - React-Core
   - react-native-safe-area-context (4.8.0):
     - React-Core
+  - react-native-video (5.2.1):
+    - React-Core
+    - react-native-video/Video (= 5.2.1)
+  - react-native-video/Video (5.2.1):
+    - React-Core
   - React-nativeconfig (0.73.0)
   - React-NativeModulesApple (0.73.0):
     - glog
@@ -1262,6 +1267,7 @@ DEPENDENCIES:
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-restart (from `../node_modules/react-native-restart`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - react-native-video (from `../node_modules/react-native-video`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -1393,6 +1399,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-restart"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-video:
+    :path: "../node_modules/react-native-video"
   React-nativeconfig:
     :path: "../node_modules/react-native/ReactCommon"
   React-NativeModulesApple:
@@ -1521,6 +1529,7 @@ SPEC CHECKSUMS:
   react-native-netinfo: 25c87e28495d955b30aeca9c22594691668c907a
   react-native-restart: 7595693413fe3ca15893702f2c8306c62a708162
   react-native-safe-area-context: d1c8161a1e9560f7066e8926a7d825eb57c5dab5
+  react-native-video: c26780b224543c62d5e1b2a7244a5cd1b50e8253
   React-nativeconfig: ec27fca81345a852feddbae7efa9231b423a1a71
   React-NativeModulesApple: aeb3e1c43af5aa4b97096fbb575792585f5e3a3e
   React-perflogger: b61e5db8e5167f5e70366e820766c492847c082e

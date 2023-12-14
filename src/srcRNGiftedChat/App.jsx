@@ -174,7 +174,7 @@ export default function App({ route }) {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
         <GiftedChat
           messages={messages}
           onSend={(newMessages) => onSend(newMessages)}

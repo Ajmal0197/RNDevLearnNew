@@ -4,5 +4,5 @@ module.exports = {
     ios: {},
     android: {},
   },
-  assets: ['./src/srcThemeing/assets/fonts'],
+  assets: ['./src/srcThemeingAndNetInfo/assets/fonts'],
 };

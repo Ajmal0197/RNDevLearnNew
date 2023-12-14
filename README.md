@@ -56,3 +56,7 @@ https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/21102ba3-15ea-426c-86c
 https://github.com/Ajmal0197/RN_Dev_Codes/assets/13982255/8efabb93-0b3f-4484-8a07-282066ef9f2c
 
 14. Firebase configuration(Messaging/Crashlytics/Analytics)
+
+15. Biometric Authentication using reat-native-keychain
+
+16. Reels/Tiktok using react native video
