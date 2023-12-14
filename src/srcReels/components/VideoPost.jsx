@@ -6,12 +6,12 @@ import Video from 'react-native-video';
 import Send_Svg from '../assets/svgs/send-svg.svg';
 import Double_Down from '../assets/svgs/double-down.svg';
 
-const VideoPost = ({ post, activePostId }) => {
+const VideoPost = ({ post, activePostId, index = 0 }) => {
   const video = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const { height } = useWindowDimensions();
 
-  console.log('VideoPostVideoPost', isPlaying, activePostId, activePostId === post.id);
+  console.log('VideoPostVideoPost', isPlaying, activePostId, index, activePostId === index);
 
   return (
     <View style={[styles.container, { height }]}>
@@ -20,7 +20,7 @@ const VideoPost = ({ post, activePostId }) => {
         style={[StyleSheet.absoluteFill, styles.video]}
         source={{ uri: post.video }}
         resizeMode="cover"
-        paused={!isPlaying || activePostId === post.id}
+        paused={!isPlaying || activePostId === index}
         onError={(e) => console.log('onError', e)} // Callback when video cannot be loaded
         repeat
       />

@@ -1,8 +1,8 @@
 import { View, StyleSheet, FlatList } from 'react-native';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import VideoPost from './components/VideoPost';
 import BootSplash from 'react-native-bootsplash';
 import { FlashList } from '@shopify/flash-list';
-import VideoPost from './components/VideoPost';
 
 const dummyPosts = [
   {
@@ -51,7 +51,7 @@ const FeedScreen = () => {
   const onViewableItemsChanged = useCallback(({ viewableItems }) => {
     const firstViewableItem = viewableItems[0];
     if (firstViewableItem && firstViewableItem.isViewable) {
-      setActivePostId(firstViewableItem.item.id);
+      setActivePostId(firstViewableItem?.index);
     }
   }, []);
 
@@ -72,7 +72,9 @@ const FeedScreen = () => {
       <FlashList
         flatListRef={flatListRef}
         data={posts}
-        renderItem={({ item, index }) => <VideoPost post={item} activePostId={activePostId} />}
+        renderItem={({ item, index }) => (
+          <VideoPost post={item} activePostId={activePostId} index={index} />
+        )}
         keyExtractor={(item, index) => `${item.id}-${index}`}
         pagingEnabled
         viewabilityConfigCallbackPairs={viewabilityConfigCallbackPairs.current}
