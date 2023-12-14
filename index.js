@@ -7,6 +7,9 @@ import { name as appName } from './app.json';
 import notifee, { EventType } from '@notifee/react-native';
 import messaging from '@react-native-firebase/messaging';
 import 'react-native-gesture-handler';
+import BootSplash from 'react-native-bootsplash';
+
+BootSplash.hide();
 
 // import App from './src/srcReduxToolkit/App';
 // import App from './src/srcAppPerformance/reactMemo';
@@ -25,7 +28,18 @@ import 'react-native-gesture-handler';
 // import App from './src/srcMultipleEnvConfig/App';
 // import App from './src/srcRNKeychainBiometric/App';
 // import App from './src/srcReels/App';
-import App from './src/srcReanimatedBottomSheet/App';
+// import App from './src/srcReanimatedBottomSheet/App';
+// import App from './src/srcReanimatedAccordion/App';
+// import App from './src/srcAnimatedBottomTabBar/App';
+// import App from './src/srcCustomAnimatedSwitch/App';
+// import App from './src/srcCustomAnimatedCheckbox/App';
+// import App from './src/srcImageCarousel/App';
+// import App from './src/srcRangeSlider/App';
+// import App from './src/srcOnboardingScreen/App';
+// import App from './src/srcCustomToast/App';
+// import App from './src/srcStackCarousel/App';
+// import App from './src/srcFloatingActionButton/App';
+import App from './src/srcCustomDrawer/App';
 
 // 1---
 // notifee.onBackgroundEvent(async ({ type, detail }) => {
