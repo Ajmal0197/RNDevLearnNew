@@ -27,20 +27,20 @@ import { SafeAreaView } from 'react-native-safe-area-context';
  * @returns {ReactNode} Returns the wrapper container component.
  */
 const ViewWrapper = ({ children, style, hideTopSafeArea = false, hideBottomSafeArea = false }) => {
-  const edgesToHide = ['top', 'bottom', 'right', 'left'];
+  const edges = ['top', 'bottom', 'right', 'left'];
 
   // Remove 'top' at index 0 if hideTopSafeArea is true
   if (hideTopSafeArea) {
-    edgesToHide.splice(0, 1);
+    edges.splice(0, 1);
   }
 
   // Remove 'bottom' at index 1 if hideBottomSafeArea is true
   if (hideBottomSafeArea) {
-    edgesToHide.splice(1, 1);
+    edges.splice(1, 1);
   }
 
   return (
-    <SafeAreaView edges={edgesToHide} style={[styles.container, style]}>
+    <SafeAreaView edges={edges} style={[styles.container, style]}>
       {children}
     </SafeAreaView>
   );
