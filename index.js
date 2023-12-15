@@ -37,7 +37,8 @@ import BootSplash from 'react-native-bootsplash';
 // import App from './src/srcReanimatedModal/App';
 // import App from './src/srcReanimatedModal/App';
 // import App from './src/srcReanimatedProgressBarLine/App';
-import App from './src/srcCustomButton/App';
+// import App from './src/srcCustomButton/App';
+import App from './src/srcWrapperViewContainer/App';
 
 // 1---
 // notifee.onBackgroundEvent(async ({ type, detail }) => {
