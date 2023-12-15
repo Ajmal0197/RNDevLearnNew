@@ -6601,6 +6601,11 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-native-blasted-image@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/react-native-blasted-image/-/react-native-blasted-image-0.0.12.tgz#811d09f81cc7839a957ebe931861bfd06150053c"
+  integrity sha512-571wPT2n6T0NH+X+cYEW/5csX2b03/snJJx/6Rn7PK+RY88peBdtZp2z/ipLIae8wLrpq3eU4calfA8ijULr4w==
+
 react-native-bootsplash@^5.1.3:
   version "5.1.3"
   resolved "https://registry.yarnpkg.com/react-native-bootsplash/-/react-native-bootsplash-5.1.3.tgz#12a06a8c008c6d5a4c4ce4f36c32d1a8a3015b89"

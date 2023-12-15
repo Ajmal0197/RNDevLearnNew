@@ -16,6 +16,7 @@
     "no-param-reassign": "off",
     "react/prop-types": "off",
     "global-require": "off",
+    "react/jsx-props-no-spreading": "off",
 
     // allow .js files to contain JSX code
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
