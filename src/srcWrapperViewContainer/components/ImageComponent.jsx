@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Dimensions, Modal, StyleSheet, TouchableOpacity } from 'react-native';
+import { ActivityIndicator, Dimensions, Modal, StyleSheet, TouchableOpacity } from 'react-native';
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import BlastedImage from 'react-native-blasted-image';
+import { ImageZoom } from '@likashefqet/react-native-image-zoom'; // https://github.com/likashefqet/react-native-image-zoom
 
 const ImageComponent = ({
   source,
@@ -62,12 +63,18 @@ const ImageComponent = ({
             >
               <GestureDetector gesture={pinchHandler}>
                 <Animated.View style={[styles.expandedImage, animatedStyle]}>
-                  <BlastedImage
-                    source={source}
-                    resizeMode={'contain'}
-                    width={Dimensions.get('window').width}
-                    height={Dimensions.get('window').height}
-                    fallbackSource={fallbackSource}
+                  <ImageZoom
+                    uri={source?.uri}
+                    minScale={0.5}
+                    maxScale={3}
+                    onInteractionStart={() => console.log('Interaction started')}
+                    onInteractionEnd={() => console.log('Interaction ended')}
+                    onPinchStart={() => console.log('Pinch gesture started')}
+                    onPinchEnd={() => console.log('Pinch gesture ended')}
+                    onPanStart={() => console.log('Pan gesture started')}
+                    onPanEnd={() => console.log('Pan gesture ended')}
+                    renderLoader={() => <ActivityIndicator />}
+                    resizeMode="contain"
                   />
                 </Animated.View>
               </GestureDetector>
