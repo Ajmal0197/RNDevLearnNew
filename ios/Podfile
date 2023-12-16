@@ -52,6 +52,19 @@ $RNFirebaseAsStaticFramework = true
 use_modular_headers!
 
 target 'RNDevLearnNew' do
+
+  # [Reanimated] Duplicate shared tag "itemID" on the same screen #4981 solution
+  pre_install do |installer|
+    installer.pod_targets.each do |pod|
+      if pod.name.eql?('RNScreens')
+        def pod.build_type
+          Pod::BuildType.static_library
+        end
+      end
+    end
+  end
+  # [Reanimated] Duplicate shared tag "itemID" on the same screen #4981 solution
+
   config = use_native_modules!
 
   # firebase

@@ -10,7 +10,7 @@ import BootSplash from 'react-native-bootsplash';
 // import App from './src/srcAppPerformance/useCallback';
 // import App from './src/srcAppPerformance/useMemo';
 // import App from './src/srcDynamicTextInput';
-// import App from './src/srcSharedElementReanimated/App';
+import App from './src/srcSharedElementReanimated/App';
 // import App from './src/srcMultilingual/App';
 // import App from './src/srcThemeingAndNetInfo/App';
 // import App from './src/srcSvg/App';
@@ -38,7 +38,7 @@ import BootSplash from 'react-native-bootsplash';
 // import App from './src/srcReanimatedModal/App';
 // import App from './src/srcReanimatedProgressBarLine/App';
 // import App from './src/srcCustomButton/App';
-import App from './src/srcWrapperViewContainer/App';
+// import App from './src/srcWrapperViewContainer/App';
 
 // 1---
 // notifee.onBackgroundEvent(async ({ type, detail }) => {
