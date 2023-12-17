@@ -1,11 +1,27 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image, Dimensions, ScrollView } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import ViewWrapper from './components/ViewWrapper';
 import CustomButton from './components/CustomButton';
 import CustomTextInput from './components/CustomTextInput';
 import ImageComponent from './components/ImageComponent';
 import ContinuousScrollBannerModal from './components/ImageGallery';
+import PostUI from './components/PostUI';
+
+const { width, height } = Dimensions.get('screen');
+
+const SkeletonLoader = () => (
+  <SkeletonPlaceholder borderRadius={4}>
+    <View style={{ flexDirection: 'row', alignItems: 'center', borderWidth: 1, padding: 10 }}>
+      <View style={{ width: 60, height: 60, borderRadius: 50 }} />
+      <View style={{ marginLeft: 20 }}>
+        <View style={{ width: width / 2, height: 20 }} />
+        <Text style={{ marginTop: 6, fontSize: 14, lineHeight: 18 }}>Hello world</Text>
+      </View>
+    </View>
+  </SkeletonPlaceholder>
+);
 
 const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -29,8 +45,11 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <ViewWrapper hideTopSafeArea>
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
           <Text>Your TOP Content Goes Here</Text>
+          <View style={{ height: 20 }} />
+          <SkeletonLoader />
+          <View style={{ height: 20 }} />
 
           <ImageComponent
             source={{ uri: 'https://picsum.photos/200/300' }}
@@ -45,20 +64,26 @@ const App = () => {
             <Text>Your TOP Content Goes Here</Text>
             <Text>Your TOP Content Goes Here</Text>
           </ImageComponent>
+          <View style={{ height: 20 }} />
+
           <ImageComponent
             source={{ uri: 'https://picsum.photos/200/300' }}
             resizeMode="cover"
             width={200}
             height={200}
             style={{ borderRadius: 100 }}
-            isBackground
           />
+          <View style={{ height: 20 }} />
+
+          <PostUI images={[2, 2, 3]} />
+          <View style={{ height: 20 }} />
 
           <CustomTextInput
             placeholder="Text input"
             errorText="THIS IS ERROR TEXT"
             type="password"
           />
+          <View style={{ height: 20 }} />
 
           <CustomButton
             onPress={openModal}
@@ -74,7 +99,8 @@ const App = () => {
             // ... Other props
           />
           <ContinuousScrollBannerModal visible={modalVisible} onClose={closeModal} />
-        </View>
+          <View style={{ height: 111 }} />
+        </ScrollView>
       </ViewWrapper>
     </SafeAreaProvider>
   );
@@ -83,8 +109,8 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-between',
     paddingHorizontal: 10,
+    paddingVertical: 100,
   },
 });
 

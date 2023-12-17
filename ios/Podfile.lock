@@ -1183,6 +1183,8 @@ PODS:
     - React-Core
   - RNCAsyncStorage (1.21.0):
     - React-Core
+  - RNCMaskedView (0.3.1):
+    - React-Core
   - RNDeviceInfo (10.12.0):
     - React-Core
   - RNFBAnalytics (18.7.2):
@@ -1301,6 +1303,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
+  - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - "RNFBAnalytics (from `../node_modules/@react-native-firebase/analytics`)"
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
@@ -1460,6 +1463,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-bootsplash"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
+  RNCMaskedView:
+    :path: "../node_modules/@react-native-masked-view/masked-view"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
   RNFBAnalytics:
@@ -1570,6 +1575,7 @@ SPEC CHECKSUMS:
   ReactCommon: e7a02fe39df0e289729a6d1638f00b2550fedacb
   RNBootSplash: 970faaa2ab1322758c6545c88d3b23f424b86a2f
   RNCAsyncStorage: 618d03a5f52fbccb3d7010076bc54712844c18ef
+  RNCMaskedView: 090213d32d8b3bb83a4dcb7d12c18f0152591906
   RNDeviceInfo: db5c64a060e66e5db3102d041ebe3ef307a85120
   RNFBAnalytics: 512c88a11641b3e6be617f6795bc9e65df51a2a3
   RNFBApp: 1a09a90a680865646fcb6ad4c7af505f36b02473
@@ -1588,6 +1594,6 @@ SPEC CHECKSUMS:
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 20d6a900dcc8d61d5e3b799bbf627cc34474a8c4
 
-PODFILE CHECKSUM: 64a8d5269275125d0a05afd84ad3c7663f7ef1cf
+PODFILE CHECKSUM: 39ba166a7040224bb59989d36375835f1a72ccb8
 
 COCOAPODS: 1.14.3
