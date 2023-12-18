@@ -145,6 +145,10 @@ const checkXSSValidations = (input) => {
   return regex.test(input) ?? false;
 };
 
+const isIOS = () => Platform.OS === 'ios' || false;
+
+const isAndroid = () => Platform.OS === 'android' || false;
+
 export {
   paddingTop,
   paddingBottom,
@@ -167,4 +171,6 @@ export {
   atLeast8Char,
   oneUpperCaseChar,
   oneSpecialCaseChar,
+  isIOS,
+  isAndroid,
 };

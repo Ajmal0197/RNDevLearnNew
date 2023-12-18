@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, Image, Dimensions, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, Image, Dimensions, ScrollView, Button } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import ViewWrapper from './components/ViewWrapper';
@@ -8,6 +8,7 @@ import CustomTextInput from './components/CustomTextInput';
 import ImageComponent from './components/ImageComponent';
 import ContinuousScrollBannerModal from './components/ImageGallery';
 import PostUI from './components/PostUI';
+import downloadHelperWithPermission from '../srcThemeingAndNetInfo/utils/downloadHelper';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -42,6 +43,15 @@ const App = () => {
     setModalVisible(false);
   };
 
+  const downloadFile = () => {
+    const downloadParams = {
+      url: 'https://picsum.photos/200/300',
+      filename: 'newImage',
+      fileType: 'image',
+    };
+    downloadHelperWithPermission(downloadParams);
+  };
+
   return (
     <SafeAreaProvider>
       <ViewWrapper hideTopSafeArea>
@@ -50,6 +60,8 @@ const App = () => {
           <View style={{ height: 20 }} />
           <SkeletonLoader />
           <View style={{ height: 20 }} />
+
+          <Button title="Download" onPress={downloadFile} />
 
           <ImageComponent
             source={{ uri: 'https://picsum.photos/200/300' }}
