@@ -1,5 +1,5 @@
-import {StyleSheet, TouchableWithoutFeedback} from 'react-native';
-import React, {useState, useEffect} from 'react';
+import { StyleSheet, TouchableWithoutFeedback } from 'react-native';
+import React, { useState, useEffect } from 'react';
 import Animated, {
   interpolateColor,
   useSharedValue,
@@ -9,7 +9,7 @@ import Animated, {
   useDerivedValue,
 } from 'react-native-reanimated';
 
-const Switch = ({activeColor, inActiveColor}) => {
+const Switch = ({ activeColor, inActiveColor }) => {
   // value for Switch Animation
   const switchTranslate = useSharedValue(0);
   // state for activate Switch
@@ -48,11 +48,7 @@ const Switch = ({activeColor, inActiveColor}) => {
 
   // Background Color Animation
   const backgroundColorStyle = useAnimatedStyle(() => {
-    const backgroundColor = interpolateColor(
-      progress.value,
-      [0, 22],
-      [inActiveColor, activeColor],
-    );
+    const backgroundColor = interpolateColor(progress.value, [0, 22], [inActiveColor, activeColor]);
     return {
       backgroundColor,
     };
@@ -62,7 +58,8 @@ const Switch = ({activeColor, inActiveColor}) => {
     <TouchableWithoutFeedback
       onPress={() => {
         setActive(!active);
-      }}>
+      }}
+    >
       <Animated.View style={[styles.container, backgroundColorStyle]}>
         <Animated.View style={[styles.circle, customSpringStyles]} />
       </Animated.View>

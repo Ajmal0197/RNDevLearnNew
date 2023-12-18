@@ -1,10 +1,5 @@
-import {Image, Platform, StyleSheet, Text} from 'react-native';
-import React, {
-  useState,
-  useCallback,
-  useImperativeHandle,
-  forwardRef,
-} from 'react';
+import { Image, Platform, StyleSheet, Text } from 'react-native';
+import React, { useState, useCallback, useImperativeHandle, forwardRef } from 'react';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -14,7 +9,7 @@ import Animated, {
   withSpring,
   runOnJS,
 } from 'react-native-reanimated';
-import {Gesture, GestureDetector} from 'react-native-gesture-handler';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 const Toast = forwardRef(({}, ref) => {
   const toastTopAnimation = useSharedValue(-100);
   const context = useSharedValue(0);
@@ -28,11 +23,11 @@ const Toast = forwardRef(({}, ref) => {
     () => ({
       show,
     }),
-    [show],
+    [show]
   );
 
   const show = useCallback(
-    ({type, text, duration}) => {
+    ({ type, text, duration }) => {
       setShowing(true);
       setToastType(type);
       setToastText(text);
@@ -41,15 +36,15 @@ const Toast = forwardRef(({}, ref) => {
         withTiming(TOP_VALUE),
         withDelay(
           duration,
-          withTiming(-100, null, finish => {
+          withTiming(-100, null, (finish) => {
             if (finish) {
               runOnJS(setShowing)(false);
             }
-          }),
-        ),
+          })
+        )
       );
     },
-    [TOP_VALUE, toastTopAnimation],
+    [TOP_VALUE, toastTopAnimation]
   );
 
   const animatedTopStyles = useAnimatedStyle(() => {
@@ -62,20 +57,17 @@ const Toast = forwardRef(({}, ref) => {
     .onBegin(() => {
       context.value = toastTopAnimation.value;
     })
-    .onUpdate(event => {
+    .onUpdate((event) => {
       if (event.translationY < 100) {
-        toastTopAnimation.value = withSpring(
-          context.value + event.translationY,
-          {
-            damping: 600,
-            stiffness: 100,
-          },
-        );
+        toastTopAnimation.value = withSpring(context.value + event.translationY, {
+          damping: 600,
+          stiffness: 100,
+        });
       }
     })
-    .onEnd(event => {
+    .onEnd((event) => {
       if (event.translationY < 0) {
-        toastTopAnimation.value = withTiming(-100, null, finish => {
+        toastTopAnimation.value = withTiming(-100, null, (finish) => {
           if (finish) {
             runOnJS(setShowing)(false);
           }
@@ -85,12 +77,12 @@ const Toast = forwardRef(({}, ref) => {
           withTiming(TOP_VALUE),
           withDelay(
             toastDuration,
-            withTiming(-100, null, finish => {
+            withTiming(-100, null, (finish) => {
               if (finish) {
                 runOnJS(setShowing)(false);
               }
-            }),
-          ),
+            })
+          )
         );
       }
     });
@@ -108,7 +100,8 @@ const Toast = forwardRef(({}, ref) => {
                 ? styles.warningToastContainer
                 : styles.errorToastContainer,
               animatedTopStyles,
-            ]}>
+            ]}
+          >
             <Image
               source={
                 toastType === 'success'
@@ -127,7 +120,8 @@ const Toast = forwardRef(({}, ref) => {
                   : toastType === 'warning'
                   ? styles.warningToastText
                   : styles.errorToastText,
-              ]}>
+              ]}
+            >
               {toastText}
             </Text>
           </Animated.View>

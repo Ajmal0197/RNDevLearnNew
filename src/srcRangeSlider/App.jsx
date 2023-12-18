@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
-import {StyleSheet, Text, View} from 'react-native';
-import React, {useState} from 'react';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import RangeSlider from './src/RangeSlider';
 const App = () => {
   const MIN_DEFAULT = 10;
@@ -9,7 +9,7 @@ const App = () => {
   const [minValue, setMinValue] = useState(MIN_DEFAULT);
   const [maxValue, setMaxValue] = useState(MAX_DEFAULT);
   return (
-    <GestureHandlerRootView style={{flex: 1}}>
+    <GestureHandlerRootView style={{ flex: 1 }}>
       <View style={styles.container}>
         <View style={styles.contentContainer}>
           <View style={styles.content}>
@@ -19,13 +19,13 @@ const App = () => {
               min={MIN_DEFAULT}
               max={MAX_DEFAULT}
               step={10}
-              onValueChange={range => {
+              onValueChange={(range) => {
                 setMinValue(range.min);
                 setMaxValue(range.max);
               }}
             />
             <View style={styles.tableContainer}>
-              <View style={{marginBottom: 20}}>
+              <View style={{ marginBottom: 20 }}>
                 <Text style={styles.colorBlack}>Min Price</Text>
                 <View style={styles.table}>
                   <Text style={styles.colorBlack}>${minValue}</Text>
@@ -81,5 +81,5 @@ const styles = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
   },
-  colorBlack: {color: 'black'},
+  colorBlack: { color: 'black' },
 });

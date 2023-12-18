@@ -1,19 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  TouchableWithoutFeedback,
-} from 'react-native';
-import React, {useRef} from 'react';
+import { StyleSheet, Text, View, SafeAreaView, TouchableWithoutFeedback } from 'react-native';
+import React, { useRef } from 'react';
 import Toast from './src/components/Toast';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const CustomToastScreen = () => {
   const toastRef = useRef();
   return (
-    <GestureHandlerRootView style={{flex: 1}}>
+    <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaView style={styles.container}>
         <Toast ref={toastRef} />
         <TouchableWithoutFeedback
@@ -23,7 +17,8 @@ const CustomToastScreen = () => {
               text: 'Success Toast',
               duration: 2000,
             });
-          }}>
+          }}
+        >
           <View style={styles.button}>
             <Text style={styles.buttonText}>Success Toast</Text>
           </View>
@@ -35,7 +30,8 @@ const CustomToastScreen = () => {
               text: 'Error Toast',
               duration: 2000,
             });
-          }}>
+          }}
+        >
           <View style={styles.button}>
             <Text style={styles.buttonText}>Error Toast</Text>
           </View>
@@ -47,7 +43,8 @@ const CustomToastScreen = () => {
               text: 'Warning Toast',
               duration: 2000,
             });
-          }}>
+          }}
+        >
           <View style={styles.button}>
             <Text style={styles.buttonText}>Warning Toast</Text>
           </View>
@@ -75,5 +72,5 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginTop: 20,
   },
-  buttonText: {fontSize: 16, fontWeight: '600', color: 'black'},
+  buttonText: { fontSize: 16, fontWeight: '600', color: 'black' },
 });

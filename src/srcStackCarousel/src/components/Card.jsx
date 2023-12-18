@@ -1,15 +1,7 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import React from 'react';
-import Animated, {
-  useAnimatedStyle,
-  interpolate,
-  withTiming,
-} from 'react-native-reanimated';
-import {
-  FlingGestureHandler,
-  Directions,
-  State,
-} from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, interpolate, withTiming } from 'react-native-reanimated';
+import { FlingGestureHandler, Directions, State } from 'react-native-gesture-handler';
 
 const Card = ({
   maxVisibleItems,
@@ -27,29 +19,21 @@ const Card = ({
     const translateY = interpolate(
       animatedValue.value,
       [index - 1, index, index + 1],
-      [-30, 1, 30],
+      [-30, 1, 30]
     );
     const translateY2 = interpolate(
       animatedValue.value,
       [index - 1, index, index + 1],
-      [-200, 1, 200],
+      [-200, 1, 200]
     );
-    const scale = interpolate(
-      animatedValue.value,
-      [index - 1, index, index + 1],
-      [0.9, 1, 1.1],
-    );
-    const opacity = interpolate(
-      animatedValue.value,
-      [index - 1, index, index + 1],
-      [1, 1, 0],
-    );
+    const scale = interpolate(animatedValue.value, [index - 1, index, index + 1], [0.9, 1, 1.1]);
+    const opacity = interpolate(animatedValue.value, [index - 1, index, index + 1], [1, 1, 0]);
     return {
       transform: [
         {
           translateY: index === prevIndex.value ? translateY2 : translateY,
         },
-        {scale},
+        { scale },
       ],
       opacity:
         index < currentIndex.value + maxVisibleItems - 1
@@ -64,25 +48,27 @@ const Card = ({
     <FlingGestureHandler
       key="up"
       direction={Directions.UP}
-      onHandlerStateChange={ev => {
+      onHandlerStateChange={(ev) => {
         if (ev.nativeEvent.state === State.END) {
           if (currentIndex.value !== 0) {
             animatedValue.value = withTiming((currentIndex.value -= 1));
             prevIndex.value = currentIndex.value - 1;
           }
         }
-      }}>
+      }}
+    >
       <FlingGestureHandler
         key="down"
         direction={Directions.DOWN}
-        onHandlerStateChange={ev => {
+        onHandlerStateChange={(ev) => {
           if (ev.nativeEvent.state === State.END) {
             if (currentIndex.value !== dataLength - 1) {
               animatedValue.value = withTiming((currentIndex.value += 1));
               prevIndex.value = currentIndex.value;
             }
           }
-        }}>
+        }}
+      >
         <Animated.Image
           source={item.image}
           style={[
