@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { AppRegistry } from 'react-native';
 import messaging from '@react-native-firebase/messaging';
 import 'react-native-gesture-handler';
@@ -37,7 +38,8 @@ import { name as appName } from './app.json';
 // import App from './src/srcReanimatedModal/App';
 // import App from './src/srcReanimatedProgressBarLine/App';
 // import App from './src/srcCustomButton/App';
-import App from './src/srcWrapperViewContainer/App';
+// import App from './src/srcWrapperViewContainer/App';
+import { A_Component } from './src/srcTypescript';
 import { navigateFromNotificationEvent } from './src/srcFirebase/firebase/notificationConfiguration';
 
 // Register background handler ; ref: https://rnfirebase.io/messaging/usage#background--quit-state-messages
@@ -48,4 +50,4 @@ messaging().setBackgroundMessageHandler(async (remoteMessage) => {
 
 BootSplash.hide();
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => A_Component);
