@@ -1,0 +1,192 @@
+iOS:
+
+1. on notification click background:
+[
+  "User pressed notification",
+  {
+    "body": "Test messageTest messageTest messageTest messageTest messageTest message",
+    "remote": {
+      "senderId": "493029575220",
+      "messageId": "1703580758071007"
+    },
+    "title": "Test message",
+    "id": "D8AFEAED-DC96-4FA9-A558-9C743CFF10E3",
+    "data": {
+      "name": "John",
+      "age": "30"
+    },
+    "ios": {
+      "threadId": "",
+      "launchImageName": "",
+      "categoryId": ""
+    }
+  }
+]
+
+2. on Notification clicked killed mode:
+[
+    "User pressed notification",
+    {
+      "body": "Test messageTest messageTest messageTest messageTest messageTest message",
+      "remote": {
+        "senderId": "493029575220",
+        "messageId": "1703581120978450"
+      },
+      "title": "Test message",
+      "id": "10E5A504-AB08-4685-9B35-AFB4349E98E3",
+      "data": {
+        "name": "John",
+        "age": "30"
+      },
+      "ios": {
+        "threadId": "",
+        "launchImageName": "",
+        "categoryId": ""
+      }
+    }
+  ]
+
+3. foreground notification received:
+[
+    "onMessage Received : ",
+    {
+      "messageId": "1703580934648627",
+      "data": {
+        "name": "John",
+        "age": "30"
+      },
+      "notification": {
+        "body": "Test messageTest messageTest messageTest messageTest messageTest message",
+        "title": "Test message"
+      },
+      "from": "493029575220"
+    }
+  ]
+
+ 4. foreground notification clicked:
+  [
+    "User pressed notification",
+    {
+      "body": "Test messageTest messageTest messageTest messageTest messageTest message",
+      "data": {
+        "name": "John",
+        "age": "30"
+      },
+      "title": "Test message",
+      "id": "rdBz1wLMJvbbl7GHNLUk",
+      "ios": {
+        "foregroundPresentationOptions": {
+          "sound": true,
+          "list": true,
+          "alert": true,
+          "badge": true,
+          "banner": true
+        }
+      }
+    }
+  ]
+
+
+  ANDROID:
+  
+  1. on notification click background:
+  setBackgroundMessageHandler1 
+    {
+      "notification": {
+        "android": {},
+        "body": "Body Body Body Body Body Body",
+        "title": "Title"
+      },
+      "sentTime": 1703583913848,
+      "data": {
+        "name": "John",
+        "car": "nano",
+        "age": "30"
+      },
+      "from": "493029575220",
+      "messageId": "0:1703583913870315%5005002250050022",
+      "ttl": 2419200,
+      "collapseKey": "com.awrostamani.testemployeeapp"
+    }
+    
+
+    2. on Notification clicked killed mode:
+    LOG  Notification caused app to open from quit/background state: 
+    {
+      "collapseKey": "com.awrostamani.testemployeeapp",
+      "data": {
+        "age": "30",
+        "car": "nano",
+        "name": "John"
+      },
+      "from": "493029575220",
+      "messageId": "0:1703584029777720%5005002250050022",
+      "notification": {
+        "android": {},
+        "body": "Body Body Body Body Body Body",
+        "title": "Title"
+      },
+      "sentTime": 1703584029754,
+      "ttl": 2419200
+    }
+
+    3. foreground notification received:
+    LOG  onMessage Received :  
+    {
+      "collapseKey": "com.awrostamani.testemployeeapp",
+      "data": {
+        "age": "30",
+        "car": "nano",
+        "name": "John"
+      },
+      "from": "493029575220",
+      "messageId": "0:1703584149319775%5005002250050022",
+      "notification": {
+        "android": {},
+        "body": "Body Body Body Body Body Body",
+        "title": "Title"
+      },
+      "sentTime": 1703584149290,
+      "ttl": 2419200
+    }
+
+4. foreground notification clicked:
+User pressed notification 
+{
+  "android": {
+    "asForegroundService": false,
+    "autoCancel": true,
+    "badgeIconType": 2,
+    "channelId": "default",
+    "chronometerDirection": "up",
+    "circularLargeIcon": false,
+    "colorized": false,
+    "defaults": [
+      -1
+    ],
+    "groupAlertBehavior": 0,
+    "groupSummary": false,
+    "importance": 3,
+    "lightUpScreen": false,
+    "localOnly": false,
+    "loopSound": false,
+    "ongoing": false,
+    "onlyAlertOnce": false,
+    "pressAction": {
+      "id": "default",
+      "launchActivity": "default"
+    },
+    "showChronometer": false,
+    "showTimestamp": false,
+    "smallIcon": "ic_launcher",
+    "visibility": 0
+  },
+  "body": "Body Body Body Body Body Body",
+  "data": {
+    "age": "30",
+    "car": "nano",
+    "name": "John"
+  },
+  "id": "rNah2E5dS1pf4e01YaLl",
+  "title": "Title"
+}

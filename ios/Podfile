@@ -10,34 +10,34 @@
  node_require('react-native/scripts/react_native_pods.rb')
  node_require('react-native-permissions/scripts/setup.rb')
 
- # ⬇️ uncomment wanted permissions
+# ⬇️ uncomment wanted permissions
 setup_permissions([
-  # 'AppTrackingTransparency',
-  # 'Bluetooth',
-  # 'Calendars',
-  # 'CalendarsWriteOnly',
-  # 'Camera',
-  # 'Contacts',
-  # 'FaceID',
-  # 'LocationAccuracy',
-  # 'LocationAlways',
-  # 'LocationWhenInUse',
-  # 'MediaLibrary',
-  # 'Microphone',
-  # 'Motion',
-  'Notifications',
-  # 'PhotoLibrary',
-  # 'PhotoLibraryAddOnly',
-  # 'Reminders',
-  # 'Siri',
-  # 'SpeechRecognition',
-  # 'StoreKit',
+ # 'AppTrackingTransparency',
+ # 'Bluetooth',
+ # 'Calendars',
+ # 'CalendarsWriteOnly',
+ 'Camera',
+ # 'Contacts',
+ 'FaceID',
+ 'LocationAccuracy',
+ # 'LocationAlways',
+ # 'LocationWhenInUse',
+ 'MediaLibrary',
+ # 'Microphone',
+ # 'Motion',
+ 'Notifications',
+ 'PhotoLibrary',
+ # 'PhotoLibraryAddOnly',
+ # 'Reminders',
+ # 'Siri',
+ # 'SpeechRecognition',
+ # 'StoreKit',
 ])
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
-flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
+# flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
 
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil

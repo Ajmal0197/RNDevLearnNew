@@ -46,10 +46,14 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera permission required.</string>
 	<key>NSFaceIDUsageDescription</key>
-	<string>$(EXECUTABLE_NAME) wants Face ID to enhance the security of your account.</string>
+	<string>$(PRODUCT_NAME) Authentication with TouchId or FaceID</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>This app needs to get your location exact location.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Galley permission required.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>OpenSans-Bold.ttf</string>

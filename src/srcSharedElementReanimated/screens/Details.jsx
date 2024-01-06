@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 import React from 'react';
 import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
+import LinearGradient from 'react-native-linear-gradient';
 import Header from '../components/Header';
 import Button from '../components/Button';
-import LinearGradient from 'react-native-linear-gradient';
 
 const Detail = ({ route }) => {
   const { item } = route.params;
@@ -17,7 +17,7 @@ const Detail = ({ route }) => {
           <Animated.Image
             sharedTransitionTag={item.name}
             source={item.image}
-            style={{ width: width, height: width }}
+            style={{ width, height: width }}
           />
           <Animated.View style={styles.textContainer} entering={FadeIn.delay(600)}>
             <Text style={styles.textName}>{item.name}</Text>

@@ -8,7 +8,7 @@ import CustomTextInput from './components/CustomTextInput';
 import ImageComponent from './components/ImageComponent';
 import ContinuousScrollBannerModal from './components/ImageGallery';
 import PostUI from './components/PostUI';
-import downloadHelperWithPermission from '../srcThemeingAndNetInfo/utils/downloadHelper';
+import downloadHelperWithPermission from '../srcThemeingAndNetInfo/utils/helperDownloadUpload';
 
 const { width, height } = Dimensions.get('screen');
 

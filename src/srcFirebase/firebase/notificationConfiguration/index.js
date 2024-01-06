@@ -2,6 +2,9 @@ import notifee, { AuthorizationStatus, EventType } from '@notifee/react-native';
 import messaging from '@react-native-firebase/messaging';
 import { Alert, Linking, Platform } from 'react-native';
 import { PERMISSIONS, request } from 'react-native-permissions';
+import { NavigationService } from '../../services/NavigationService';
+// import Clipboard from '@react-native-clipboard/clipboard';
+// import { LOGIN_WITH_CREDS_SCREEN } from '../routes/navigationConstants';
 
 // method was called to get FCM token for notification
 export const getFcmToken = async () => {
@@ -10,6 +13,16 @@ export const getFcmToken = async () => {
   try {
     token = await messaging().getToken();
     console.log('getFcmToken-->', token);
+
+    Alert.alert('TOKEN', token, [
+      { text: 'Cancel' },
+      {
+        text: 'Copy',
+        onPress: async () => {
+          // Clipboard.setString(token);
+        },
+      },
+    ]);
   } catch (error) {
     console.log('getFcmToken Device Token error ', error);
   }
@@ -40,7 +53,7 @@ export function registerListenerWithFCM() {
   const unsubscribe = messaging().onMessage(async (remoteMessage) => {
     alert(JSON.stringify(remoteMessage));
     //
-    console.log('onMessage Received : ', JSON.stringify(remoteMessage));
+    console.log('onMessage Received : ', remoteMessage);
     if (remoteMessage?.notification?.title && remoteMessage?.notification?.body) {
       onDisplayNotification(
         remoteMessage.notification?.title,
@@ -56,12 +69,13 @@ export function registerListenerWithFCM() {
         break;
       case EventType.PRESS:
         console.log('User pressed notification', detail.notification);
-        // if (detail?.notification?.data?.clickAction) {
-        //   onNotificationClickActionHandling(
-        //     detail.notification.data.clickAction
-        //   );
-        // }
+        const notifDetail = detail?.notification;
+        if (notifDetail) {
+          navigateFromNotificationEvent(notifDetail?.data);
+        }
         break;
+      default:
+        return null;
     }
   });
 
@@ -71,6 +85,7 @@ export function registerListenerWithFCM() {
     .then((remoteMessage) => {
       if (remoteMessage) {
         console.log('Notification caused app to open from quit/background state:', remoteMessage);
+        navigateFromNotificationEvent(remoteMessage?.data);
       }
     });
 
@@ -132,6 +147,20 @@ export async function localDisplayNotificationSample() {
     },
   });
 }
+
+export const navigateFromNotificationEvent = (data = {}, title = null, body = null) => {
+  console.log('navigateFromNotificationEvent', data);
+  setTimeout(() => {
+    if (NavigationService?.navigate) {
+      // switch (true) {
+      //   case true:
+      //     return NavigationService.navigate(LOGIN_WITH_CREDS_SCREEN);
+      //   default:
+      //     break;
+      // }
+    }
+  }, 1000);
+};
 
 const checkPermissions = async () => {
   if (Platform.OS === 'ios') {

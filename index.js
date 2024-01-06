@@ -1,5 +1,4 @@
 import { AppRegistry } from 'react-native';
-import notifee, { EventType } from '@notifee/react-native';
 import messaging from '@react-native-firebase/messaging';
 import 'react-native-gesture-handler';
 import BootSplash from 'react-native-bootsplash';
@@ -39,22 +38,12 @@ import { name as appName } from './app.json';
 // import App from './src/srcReanimatedProgressBarLine/App';
 // import App from './src/srcCustomButton/App';
 import App from './src/srcWrapperViewContainer/App';
+import { navigateFromNotificationEvent } from './src/srcFirebase/firebase/notificationConfiguration';
 
-// 1---
-// notifee.onBackgroundEvent(async ({ type, detail }) => {
-//   const { notification, pressAction } = detail;
-//   console.log('setBackgroundMessageHandler0', JSON.stringify(detail));
-//   // Check if the user pressed the "Mark as read" action
-//   if (type === EventType.ACTION_PRESS && pressAction.id === 'mark-as-read') {
-//     // Remove the notification
-//     await notifee.cancelNotification(notification.id);
-//   }
-// });
-// OR
-// 2 ----
 // Register background handler ; ref: https://rnfirebase.io/messaging/usage#background--quit-state-messages
 messaging().setBackgroundMessageHandler(async (remoteMessage) => {
   console.log('setBackgroundMessageHandler1', JSON.stringify(remoteMessage));
+  navigateFromNotificationEvent(remoteMessage?.data);
 });
 
 BootSplash.hide();
