@@ -1,19 +1,31 @@
 // Import necessary components and modules from 'react'
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useMemo, useState } from "react";
 
-//5
 // Define the prop types for the StyleProvider component
+//5
 interface StyleProviderPropTypes {
     children: ReactNode;
 }
 
-//4
+// Explanation:
+// - StyleProviderPropTypes: This is an interface representing the prop types for the StyleProvider component.
+// - It specifies that the 'children' prop should be of type ReactNode, which is a common type for representing
+//   any node that could be rendered in React, such as elements, strings, or fragments.
+
 // Define the types for the context values
+//4
 interface ContextTypes {
     bg: string;
     color: string;
     updateContext: (newContext: ContextTypes) => void;
 }
+
+// Explanation:
+// - ContextTypes: This is an interface representing the types for the context values used in the context provider.
+// - It specifies that the context should have 'bg' and 'color' properties of type string,
+//   and an 'updateContext' function that takes a new context and returns void.
+//   The 'updateContext' function is expected to update the context values.
+
 
 //1
 // Define the default context values
@@ -33,20 +45,20 @@ const StyleProvider = ({ children }: StyleProviderPropTypes) => {
     // Use useState to manage dynamic updates to the context values
     const [context, setContext] = useState<ContextTypes>(initialContext);
 
-    // Function to update the context values
-    const updateContext = (newContext: ContextTypes) => {
-        setContext(newContext);
-    };
+    // Use useMemo to memoize the context value
+    const memoizedContext = useMemo(() => ({
+        ...context,
+        updateContext: (newContext: ContextTypes) => {
+            setContext(newContext);
+        },
+    }), [context]);
 
     return (
-        <MyContextStyle.Provider value={{ ...context, updateContext }}>
+        <MyContextStyle.Provider value={memoizedContext}>
             {children}
         </MyContextStyle.Provider>
     );
 }
-
-// Export the StyleProvider component as the default export of this module
-export default StyleProvider;
 
 
 //WITHOUT STATE UPDATE

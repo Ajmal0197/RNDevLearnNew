@@ -39,7 +39,7 @@ import { name as appName } from './app.json';
 // import App from './src/srcReanimatedProgressBarLine/App';
 // import App from './src/srcCustomButton/App';
 // import App from './src/srcWrapperViewContainer/App';
-import { A_Component, B_Navigation } from './src/srcTypescript';
+import { A_Component, B_Navigation, C_Redux } from './src/srcTypescript';
 import { navigateFromNotificationEvent } from './src/srcFirebase/firebase/notificationConfiguration';
 
 // Register background handler ; ref: https://rnfirebase.io/messaging/usage#background--quit-state-messages
@@ -50,4 +50,4 @@ messaging().setBackgroundMessageHandler(async (remoteMessage) => {
 
 BootSplash.hide();
 
-AppRegistry.registerComponent(appName, () => B_Navigation);
+AppRegistry.registerComponent(appName, () => C_Redux);
