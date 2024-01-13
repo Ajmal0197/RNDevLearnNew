@@ -14,11 +14,22 @@ let names: Array<string> = ["John", "Jane", "Doe"];
 // Objects
 let user: { name: string; age: number } = { name: "John", age: 25 };
 
+// Used in case of dynamic data
+let dynamicData: any = fetchDataFromExternalSource();
+function fetchDataFromExternalSource() { }
+
 // Interfaces
 interface User {
     name: string;
     age: number;
 }
+
+// Declare an array of objects with the defined interface
+const people: User[] = [
+    { name: "Alice", age: 25, },
+    { name: "Bob", age: 30, },
+    { name: "Charlie", age: 28, },
+];
 
 // Union Types (variable or property can only have one of these specific values.)
 type Status = "active" | "inactive" | "pending";
@@ -35,13 +46,13 @@ const stringBox: Box<string> = { value: "Hello, Generics!" };
 // Creating a Box instance with number type
 const numberBox: Box<number> = { value: 42 };
 
+
 // Nullable and Optional Types
 interface UserData {
     name: string;
     age?: number; // Optional property
     job: string | null; // Nullable property
 }
-
 const userWithOptional: UserData = { name: "John", job: null };
 const userWithAge: UserData = { name: "Jane", age: 30, job: "Engineer" };
 
@@ -49,7 +60,6 @@ const userWithAge: UserData = { name: "Jane", age: 30, job: "Engineer" };
 let value: any = "Hello, TypeScript!"; // 'value' is of type 'any'
 // Using a type assertion to tell TypeScript that 'value' is a string
 let length: number = (value as string).length;
-
 
 // Intersection Types (Intersection types are useful when you want to create a new type that encompasses properties from multiple types. The resulting type ensures that an object adhering to it must satisfy the requirements of all the intersected types.)
 // Interface representing properties of a car
@@ -66,6 +76,12 @@ interface Driver {
 type CarAndDriver = Car & Driver;
 // Creating an instance of CarAndDriver
 const carAndDriver: CarAndDriver = { brand: "Toyota", year: 2022, name: "Alice", age: 25 };
+
+// fetchData takes a callback function as a parameter, and the callback is expected to have a return type of void.
+function fetchData(callback: () => void): void {
+    // Perform asynchronous operation and invoke the callback
+    callback();
+}
 
 // Functional component using React.FC
 const FunctionComponent: React.FC = () => {
@@ -117,3 +133,51 @@ const FunctionComponent: React.FC = () => {
 };
 
 export default FunctionComponent;
+
+
+/*
+The provided code seems to cover a broad range of TypeScript concepts and React Native functionalities. It includes:
+
+1. **Basic Types:**
+   - `number`, `string`, `boolean`, `any`
+
+2. **Arrays:**
+   - `number[]`, `Array<string>`
+
+3. **Objects:**
+   - Object with properties `name` and `age`
+
+4. **Interfaces:**
+   - `User`, `UserData`, `Box<T>`, `Car`, `Driver`
+
+5. **Union Types:**
+   - `Status`, `string | null`
+
+6. **Function Types:**
+   - `AddFunction`, function parameters and return types
+
+7. **Generics:**
+   - `Box<T>`, `stringBox`, `numberBox`
+
+8. **Nullable and Optional Types:**
+   - `UserData` with optional and nullable properties
+
+9. **Type Assertions:**
+   - Type assertion with `(value as string)`
+
+10. **Intersection Types:**
+    - `CarAndDriver` combining properties of `Car` and `Driver`
+
+11. **Callbacks and Asynchronous Operations:**
+    - `fetchData` function taking a callback
+
+12. **React State:**
+    - `useState` for managing state variables (`status` and `age`)
+
+13. **React Functional Component:**
+    - `React.FC` used for defining the functional component (`FunctionComponent`)
+
+14. **React Native Components:**
+    - Usage of `View`, `Text`, `TouchableOpacity`, and `FlatList`
+
+*/

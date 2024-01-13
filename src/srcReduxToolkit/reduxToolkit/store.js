@@ -3,7 +3,6 @@ import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } fro
 import cakeReducer from './slices/cakeSlice';
 import icecreamReducer from './slices/icecreamSlice';
 import userReducer from './slices/userSlice';
-import Reactotron from './reactotronConfig/ReactotronConfig';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 import { reduxStorageMMKV } from '../constants/constants';
 // import logger from 'redux-logger';
@@ -31,9 +30,12 @@ const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER], //
       },
     }),
-  // middleware: getDefaultMiddleware => getDefaultMiddleware().concat(logger),
-  enhancers: [Reactotron.createEnhancer()],
-  devTools: __DEV__,
+  enhancers: (getDefaultEnhancers) =>
+    !__DEV__
+      ? getDefaultEnhancers()
+      : getDefaultEnhancers().concat(
+          require('./reactotronConfig/ReactotronConfig').createEnhancer()
+        ),
 });
 
 export default store;
