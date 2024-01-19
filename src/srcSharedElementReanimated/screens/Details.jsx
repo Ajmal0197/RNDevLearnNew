@@ -4,6 +4,7 @@ import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 import LinearGradient from 'react-native-linear-gradient';
 import Header from '../components/Header';
 import Button from '../components/Button';
+import AnimatedScalePressView from '../components/AnimatedScalePressView';
 
 const Detail = ({ route }) => {
   const { item } = route.params;
@@ -29,7 +30,11 @@ const Detail = ({ route }) => {
           <Text style={styles.text}>{item.about}</Text>
         </Animated.View>
       </View>
-      <Button />
+      <AnimatedScalePressView onPress={()=>alert('hye')}>
+      <View style={{paddingHorizontal:100, paddingVertical:20, marginBottom:100, backgroundColor:'red', borderRadius:50}}>
+        <Text>BOOKING NOW</Text>
+      </View>
+      </AnimatedScalePressView>
     </LinearGradient>
   );
 };

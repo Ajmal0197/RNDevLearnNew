@@ -11,7 +11,7 @@ const RenderItem = ({ item, index }) => {
       <Pressable
         style={styles.container}
         onPress={() => {
-          navigation.navigate('Details', { item: item });
+          navigation.navigate('Details', { item });
         }}
       >
         {/* Animated.Image with sharedTransitionTag is used to create a visually appealing shared element transition between screens when navigating, ensuring a smooth animation of the image as it moves from one screen to another. */}
