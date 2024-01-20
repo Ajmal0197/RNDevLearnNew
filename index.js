@@ -4,13 +4,14 @@ import messaging from '@react-native-firebase/messaging';
 import 'react-native-gesture-handler';
 import BootSplash from 'react-native-bootsplash';
 import { name as appName } from './app.json';
+import { navigateFromNotificationEvent } from './src/srcFirebase/firebase/notificationConfiguration';
 
 // import App from './src/srcReduxToolkit/App';
 // import App from './src/srcAppPerformance/reactMemo';
 // import App from './src/srcAppPerformance/useCallback';
 // import App from './src/srcAppPerformance/useMemo';
 // import App from './src/srcDynamicTextInput';
-import App from './src/srcSharedElementReanimated/App';
+// import App from './src/srcSharedElementReanimated/App';
 // import App from './src/srcMultilingual/App';
 // import App from './src/srcThemeingAndNetInfo/App';
 // import App from './src/srcSvg/App';
@@ -40,7 +41,7 @@ import App from './src/srcSharedElementReanimated/App';
 // import App from './src/srcCustomButton/App';
 // import App from './src/srcWrapperViewContainer/App';
 // import { A_Component, B_Navigation, C_Redux } from './src/srcTypescript';
-import { navigateFromNotificationEvent } from './src/srcFirebase/firebase/notificationConfiguration';
+import App from './src/srcRNUnistyles/App';
 
 // Register background handler ; ref: https://rnfirebase.io/messaging/usage#background--quit-state-messages
 messaging().setBackgroundMessageHandler(async (remoteMessage) => {
