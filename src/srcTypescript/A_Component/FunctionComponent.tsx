@@ -56,12 +56,14 @@ interface UserData {
 const userWithOptional: UserData = { name: "John", job: null };
 const userWithAge: UserData = { name: "Jane", age: 30, job: "Engineer" };
 
-// Type Assertions ( In TypeScript, type assertions provide a way for you to tell the compiler that you know more about the type of a particular value than TypeScript does. This is useful when you're working with types that TypeScript can't infer accurately.)
+// Type Assertions ( In TypeScript, type assertions provide a way for you to tell the compiler that you know more about the type of a particular value than TypeScript does. 
+// This is useful when you're working with types that TypeScript can't infer accurately.)
 let value: any = "Hello, TypeScript!"; // 'value' is of type 'any'
 // Using a type assertion to tell TypeScript that 'value' is a string
 let length: number = (value as string).length;
 
-// Intersection Types (Intersection types are useful when you want to create a new type that encompasses properties from multiple types. The resulting type ensures that an object adhering to it must satisfy the requirements of all the intersected types.)
+// Intersection Types (Intersection types are useful when you want to create a new type that encompasses properties from multiple types. 
+// The resulting type ensures that an object adhering to it must satisfy the requirements of all the intersected types.)
 // Interface representing properties of a car
 interface Car {
     brand: string;
@@ -83,7 +85,7 @@ function fetchData(callback: () => void): void {
     callback();
 }
 
-// Functional component using React.FC
+// Functional component using React.FC(only valid for components not Screens)
 const FunctionComponent: React.FC = () => {
     // React State
     const [status, setStatus] = useState<Status>('active');

@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, StyleSheet, TextInput, View } from 'react-native';
 import React, { useEffect, useRef, useState } from 'react';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '..';
@@ -42,14 +42,10 @@ const Home = ({ navigation, route }: HomeScreenProps) => {
   const useRefInput = useRef<TextInput>(null) //null must be default value 
 
   useEffect(() => {
-    const fetchUserData = () => ({ name: 'ajmal' }); // Use parentheses to return an object
-    // Simulate fetching data from an API or performing an asynchronous operation
+    const fetchUserData = () => ({ name: 'ajmal' });
     const fetchData = async () => {
       try {
-        // Assuming you have an API call that returns user data
-        const userData = await fetchUserData(); // Replace with your actual API call
-
-        // Update the state variables with the fetched data
+        const userData = await fetchUserData();
         setName(userData.name);
         setUser(userData);
         setIsLoaded(true);

@@ -3,8 +3,6 @@ import { configureStore } from '@reduxjs/toolkit';
 import notesReducer from './noteSlice';
 import userReducer from './userSlice';
 
-// Import your slices and reducers here
-
 const store = configureStore({
   reducer: {
     notesSlice: notesReducer,
@@ -12,6 +10,7 @@ const store = configureStore({
   },
 });
 
+// Below RootState & AppDispatch are used in hooks.ts
 // Declare a type named RootState
 export type RootState = ReturnType<typeof store.getState>;
 

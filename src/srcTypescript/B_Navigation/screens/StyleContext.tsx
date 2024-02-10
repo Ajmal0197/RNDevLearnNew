@@ -7,11 +7,6 @@ interface StyleProviderPropTypes {
     children: ReactNode;
 }
 
-// Explanation:
-// - StyleProviderPropTypes: This is an interface representing the prop types for the StyleProvider component.
-// - It specifies that the 'children' prop should be of type ReactNode, which is a common type for representing
-//   any node that could be rendered in React, such as elements, strings, or fragments.
-
 // Define the types for the context values
 //4
 interface ContextTypes {
@@ -20,16 +15,9 @@ interface ContextTypes {
     updateContext: (newContext: ContextTypes) => void;
 }
 
-// Explanation:
-// - ContextTypes: This is an interface representing the types for the context values used in the context provider.
-// - It specifies that the context should have 'bg' and 'color' properties of type string,
-//   and an 'updateContext' function that takes a new context and returns void.
-//   The 'updateContext' function is expected to update the context values.
-
-
 //1
 // Define the default context values
-const initialContext = {
+const initialContext: ContextTypes = {
     bg: 'green',
     color: 'white',
     updateContext: () => { }, // Placeholder function, it will be replaced by useState
@@ -59,6 +47,8 @@ const StyleProvider = ({ children }: StyleProviderPropTypes) => {
         </MyContextStyle.Provider>
     );
 }
+
+export default StyleProvider
 
 
 //WITHOUT STATE UPDATE

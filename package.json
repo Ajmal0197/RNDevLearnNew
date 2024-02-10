@@ -31,7 +31,17 @@
     "android:dev-release": "react-native run-android --mode=developmentrelease",
     "android:prod": "react-native run-android --mode=productiondebug",
     "android:prod-release": "react-native run-android --mode=productionrelease",
-    "clean:build": "cd android/ && ./gradlew clean &&  ./gradlew app:assembleRelease"
+    "aos:clean": "cd android && ./gradlew clean",
+    "aos:DR-apk": "yarn setDevelopment &&  yarn aos:clean  && cd android && ./gradlew assembleDevelopmentRelease",
+    "aos:PR-apk": "yarn setProduction &&  yarn aos:clean  && cd android && ./gradlew assembleProductionRelease",
+    "aos:DD-apk": "yarn setDevelopment &&  yarn aos:clean  && cd android && ./gradlew assembleDevelopmentDebug",
+    "aos:PD-apk": "yarn setProduction &&  yarn aos:clean  && cd android && ./gradlew assembleProductionDebug",
+    "open-apk": "open ./android/app/build/outputs/apk/",
+    "aos:dev:release-apk": "yarn aos:DR-apk && yarn open-apk",
+    "aos:prod:release-apk": "yarn aos:PR-apk && yarn open-apk",
+    "aos:dev-apk": "yarn aos:DD-apk && yarn open-apk",
+    "aos:prod-apk": "yarn aos:PD-apk && yarn open-apk",
+    "uninstallApks": "cd android && ./gradlew uA && cd .."
   },
   "dependencies": {
     "@likashefqet/react-native-image-zoom": "^2.1.1",

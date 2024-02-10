@@ -12,6 +12,7 @@ export interface Note {
 
 // Initialize the initial state as an empty array of Notes
 const initialState: Array<Note> = [];
+// or const initialState: Note[] = [];
 
 // Create a Redux toolkit slice for managing the 'notes' state
 export const notesSlice = createSlice({

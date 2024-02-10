@@ -17,17 +17,18 @@ interface User {
 // Define the type for the initial state
 interface UserState {
   loading: boolean;
-  users: User[];
+  users: User[]; //Array<User>
   error: string;
 }
 
-// Create an enum for action types to avoid string literals
+// Enums used for constants
 enum UserActionTypes {
   //   PUSH_TO_USERS = 'user/pushToUsers',
   FETCH_USERS = 'user/fetchUsers',
 }
 
-// Create an async thunk to fetch users from the API
+// The <User[]> syntax you see is a way to explicitly specify the return type of the createAsyncThunk function.
+// It is TypeScript syntax indicating that the asynchronous thunk will return an array of User objects.
 export const fetchUsers = createAsyncThunk<User[]>(
   UserActionTypes.FETCH_USERS,
   async (_, thunkApi) => {
@@ -71,7 +72,7 @@ const userSlice = createSlice({
     builder.addCase(fetchUsers.rejected, (state, action) => {
       state.loading = false;
       state.users = [];
-      state.error = action.error.message || 'An error occurred';
+      state.error = action.error.message ?? 'An error occurred';
     });
   },
 });
