@@ -18,6 +18,7 @@
     "global-require": "off",
     "react/jsx-props-no-spreading": "off",
     "arrow-body-style": "off",
+    "no-console": "off",
 
     // allow .js files to contain JSX code
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
