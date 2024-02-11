@@ -94,9 +94,10 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0",
-        resValue 'string', 'build_config_package','com.rndevlearnnew' //com.rndevlearnnew
+        versionName "1.0"
+        resValue 'string', 'build_config_package', 'com.rndevlearnnew'
     }
+
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
@@ -108,8 +109,7 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
-            matchingFallbacks = ['debug', 'release'] com.rndevlearnnew
-
+            matchingFallbacks = ['debug', 'release'] //react-native-config
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
