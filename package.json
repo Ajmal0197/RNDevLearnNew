@@ -90,6 +90,7 @@
     "react-native-svg": "^14.1.0",
     "react-native-unistyles": "^2.0.2",
     "react-native-video": "^5.2.1",
+    "react-native-vision-camera": "^3.8.2",
     "react-redux": "^9.1.0",
     "redux": "^5.0.1",
     "redux-logger": "^3.0.6",

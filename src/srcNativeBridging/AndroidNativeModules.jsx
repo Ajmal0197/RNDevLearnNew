@@ -12,7 +12,7 @@ const AndroidNativeModules = () => {
   // Define a function to send data to the native Android module
   const sendDataToAndroid = () => {
     // Call the native method without using a promise
-    MyModule.myMethod('THIS IS SENT FROM RN');
+    MyModule.myMethod('THIS IS SENT FROM RN TO ANDROID');
   };
 
   // Define a function to get data from the native Android module

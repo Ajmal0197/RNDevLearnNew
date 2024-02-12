@@ -1,2 +1,2 @@
-APP_CONFIG=production
-API_URL=https:/$()/myapi.com
+APP_CONFIG=development
+API_URL=https:/$()/myapi.development.com
