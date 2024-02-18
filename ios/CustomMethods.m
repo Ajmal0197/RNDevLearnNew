@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import <React/RCTBridgeModule.h">
+#import <React/RCTBridgeModule.h>
 
 // ALL MODULES/METHODS TO BE EXPOSED TO RN ARE MENTIONED IN "Objective-C" ".m" files
 // THIS IS ONLY FOR GETTING DATA TO IOS FROM RN

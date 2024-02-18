@@ -15,6 +15,7 @@ b) npx uri-scheme add myapp
 a) npx uri-scheme open "testapp://profile/100911" --ios
 b) npx uri-scheme open "myapp://home" --android //will work in real device only
 c) npx uri-scheme open "myapp://chat/211/Ajmal" --ios
+d) npx uri-scheme open "myapp://" --android (open app)
 */
 
 import React, { useEffect } from 'react';
