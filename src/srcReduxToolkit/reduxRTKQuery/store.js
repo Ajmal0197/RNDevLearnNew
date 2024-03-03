@@ -9,7 +9,7 @@ const persistConfig = {
   key: 'root',
   version: 1,
   storage: AsyncStorage,
-  blacklist: ['cake'], // these reduce will not persist data
+  blacklist: ['cake', rtkBaseUrl1Api.reducerPath, rtkBaseUrl2Api.reducerPath], // these reduce will not persist data (NOTE: blacklist rtk api slices so that to use tags)
   // whitelist: ['users'], //these reduce will persist data
 };
 
