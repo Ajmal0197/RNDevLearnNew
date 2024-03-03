@@ -2,16 +2,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { setRTKCreatedDataAction } from './cakeSlice';
 
-const bodyUpdateCart = JSON.stringify({
-  merge: true, // this will include existing products in the cart
-  products: [
-    {
-      id: 9,
-      quantity: 1,
-    },
-  ],
-});
-
 // RTK Query "tags" usage flow:
 // 1. Define "tagTypes"
 // 2. "providesTags" in query(this will be used to recall api call when invalidatesTags is called)
@@ -46,13 +36,7 @@ export const rtkBaseUrl1Api = createApi({
       transformResponse: (response, meta, arg) => response.data,
       // Pick out errors and prevent nested properties in a hook or selector
       transformErrorResponse: (response, meta, arg) => response.status,
-      providesTags: (result, error, id) =>
-        result
-          ? [{ type: 'CartById', id }]
-          : error?.status === 401
-            ? ['UNAUTHORIZED']
-            : ['UNKNOWN_ERROR'],
-      // The 2nd parameter is the destructured `QueryLifecycleApi`
+      providesTags: ['CartById'],
       async onQueryStarted(
         arg,
         { dispatch, getState, extra, requestId, queryFulfilled, getCacheEntry, updateCachedData }
@@ -101,12 +85,12 @@ export const rtkBaseUrl1Api = createApi({
 
     // Define endpoint for updating user
     updateCart: builder.mutation({
-      query: (body = bodyUpdateCart) => ({
-        url: `${body.id}`,
+      query: (body) => ({
+        url: `/2`,
         method: 'PUT',
         body,
       }),
-      invalidatesTags: (result, error, body) => [{ type: 'CartById', id: body?.id }],
+      invalidatesTags: ['CartById'],
     }),
     // Define endpoint for deleting user
     deleteCart: builder.mutation({

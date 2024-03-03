@@ -30,7 +30,7 @@ const HomeScreen = () => {
     data: cartById,
     isLoading: isLoadingCartById,
     isError: isErrorCartById,
-  } = useGetCartByIdQuery(9, { refetchOnMountOrArgChange: true, skip: false }); // Passing the cart ID (1 in this example) to fetch a specific cart; refetchOnMountOrArgChange will be called on ID change or screen mount
+  } = useGetCartByIdQuery(11, { refetchOnMountOrArgChange: true, skip: false }); // Passing the cart ID (1 in this example) to fetch a specific cart; refetchOnMountOrArgChange will be called on ID change or screen mount
 
   // Example: Creating a new cart
   // Mutation syntax:   const [updatePost, result] = useUpdatePostMutation()
@@ -83,7 +83,22 @@ const HomeScreen = () => {
               )
             }
           />
-          <Button title="Update Cart" onPress={() => updateCart({ id: 9 })} />
+          <Button
+            title="Update Cart"
+            onPress={() =>
+              updateCart(
+                JSON.stringify({
+                  merge: true, // this will include existing products in the cart
+                  products: [
+                    {
+                      id: 1,
+                      quantity: 1,
+                    },
+                  ],
+                })
+              )
+            }
+          />
           <Button
             title="Delete Cart"
             onPress={() => {
