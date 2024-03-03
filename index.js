@@ -19,8 +19,9 @@ import { navigateFromNotificationEvent } from './src/srcFirebase/firebase/notifi
 // import App from './src/srcRNGiftedChat/App';
 // import App from './src/srcLinkingDeeplinking/App';
 // import App from './src/srcReduxToolkit/App';
+import App from './src/srcReduxToolkit/reduxRTKQuery/App';
 // import App from './src/srcFirebase/App';
-import App from './src/srcFirebaseDeeplinkNotifRedirect/App';
+// import App from './src/srcFirebaseDeeplinkNotifRedirect/App';
 // import App from './src/srcMultipleEnvConfig/App';
 // import App from './src/srcRNKeychainBiometric/App';
 // import App from './src/srcReels/App';

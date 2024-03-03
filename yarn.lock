@@ -6801,10 +6801,10 @@ react-native-blob-util@^0.19.6:
     base-64 "0.1.0"
     glob "^10.3.10"
 
-react-native-bootsplash@^5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/react-native-bootsplash/-/react-native-bootsplash-5.4.0.tgz#62c8daf6d67a9802e269557eccb7d243b20c719a"
-  integrity sha512-7BNFNdB7BlAMTiaKzIPOTdWznRy3FRJeCEu7dcH2FRmtGtwutUP4VwZTunRgu7IjMe2Un2pLp4HcFCbhujZ7xw==
+react-native-bootsplash@^5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-bootsplash/-/react-native-bootsplash-5.4.1.tgz#adfd54a668f65f71d061ac8d2abe55f56c484183"
+  integrity sha512-ldhKjIr6S6wPQicux55r3/l8zVKuvy6bPoij/77t29MR3Tm0D7U9RSgxU1tOi8HFmwx95cUZTxRC3P8GjO5FCA==
   dependencies:
     "@emotion/hash" "^0.9.1"
     "@expo/config-plugins" "^7.8.4"
@@ -6831,10 +6831,10 @@ react-native-config@^1.5.1:
   resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-1.5.1.tgz#73c94f511493e9b7ff9350cdf351d203a1b05acc"
   integrity sha512-g1xNgt1tV95FCX+iWz6YJonxXkQX0GdD3fB8xQtR1GUBEqweB9zMROW77gi2TygmYmUkBI7LU4pES+zcTyK4HA==
 
-react-native-device-info@^10.12.0:
-  version "10.12.0"
-  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-10.12.0.tgz#be4e71cbcc9a05e8643b1a419a4450d4cef9bbcc"
-  integrity sha512-gnBkjyZNEqRd+5BNrdzuvmlraHTCH/to2x0Gp9rtDt0O9xWWW1MTYohUVWX9A0Ad2HVYcGanDCIvjWp4ngMZFg==
+react-native-device-info@^10.13.1:
+  version "10.13.1"
+  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-10.13.1.tgz#f87f44ba7b67933248be10ca302a4f2f6dbbdd4f"
+  integrity sha512-j/7Z+Yl9Cesjp8vKaVzbuJQKJSVs4ojXATt5WjwipZ0Ss0mBJjqtbc4x5dfZLmQ4y55VVa7c0v8KHca1iqY/TQ==
 
 react-native-document-picker@^9.1.1:
   version "9.1.1"
@@ -6950,10 +6950,10 @@ react-native-parsed-text@0.0.22:
   dependencies:
     prop-types "^15.7.x"
 
-react-native-permissions@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-4.1.1.tgz#6c185f9ec45069fa14cf8992bed6b67fc8981478"
-  integrity sha512-wdIHMwmDZ6pRVsgAgF7mn/pJEuJd5wJDGENqvFDJs2lW4BSZeN++ZFsA6FgOqUs/2276Oj7rslQgVaxdOsi6yw==
+react-native-permissions@^4.1.4:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-4.1.4.tgz#7e105470acea7fc1748bb36915095fd3304cd9da"
+  integrity sha512-el6u90VZNFDEtmHpSheirwRhGvs6M5rSZcoqIqB128IPO00f2c1q+PP4kEaM1u19Q0ldQ+R+S7C/l8Zrduy6JQ==
 
 react-native-reanimated@^3.7.0:
   version "3.7.0"
@@ -7011,10 +7011,10 @@ react-native-typing-animation@0.1.7:
   resolved "https://registry.yarnpkg.com/react-native-typing-animation/-/react-native-typing-animation-0.1.7.tgz#8f2cf08d9400ae543a110292eb7d71523dda5528"
   integrity sha512-4H3rF9M+I2yAZpYJcY0Mb29TXkn98QK12rrKSY6LZj1BQD9NNmRZuNXzwX4XHapsIz+N/J8M3p27FOQPbfzqeg==
 
-react-native-unistyles@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/react-native-unistyles/-/react-native-unistyles-2.3.0.tgz#36d5f73512822f6fed3019f231ee85037a9bf867"
-  integrity sha512-JvnSvVTovFhJh1eQ9yyDvmaQyeu0YkUOaNxhf8HS6t2UQuLhl8QoRQlAqTT6sRwaH+SjEaCR5GX9nD35chIhDg==
+react-native-unistyles@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-unistyles/-/react-native-unistyles-2.4.0.tgz#6622c44a76b77522c8674ba63b1b19d7c1e67a5b"
+  integrity sha512-d38FehTqb05uTSGM6ZV74xFCeWXSoJ4u2WGEZ9k0TaboAOG+CcLWeLPPGABh31MDuUBro11v5sf8RFV+Z+f46A==
 
 react-native-video@^5.2.1:
   version "5.2.1"
