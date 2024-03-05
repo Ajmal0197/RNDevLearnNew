@@ -66,8 +66,8 @@ const HomeScreen = () => {
           <Button
             title="Create Cart"
             onPress={() =>
-              createCart(
-                JSON.stringify({
+              createCart({
+                body: JSON.stringify({
                   userId: 1,
                   products: [
                     {
@@ -79,8 +79,9 @@ const HomeScreen = () => {
                       quantity: 2,
                     },
                   ],
-                })
-              )
+                }),
+                navigation: 'AJMAL',
+              })
             }
           />
           <Button

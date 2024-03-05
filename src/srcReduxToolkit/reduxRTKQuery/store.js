@@ -1,4 +1,4 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore, isRejectedWithValue } from '@reduxjs/toolkit';
 import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import cakeSlice from './slices/cakeSlice';
@@ -29,6 +29,19 @@ const getEnhancers = (getDefaultEnhancers) => {
   return getDefaultEnhancers();
 };
 
+/**
+ * On api error this will be called
+ */
+export const rtkQueryErrorLogger = (api) => (next) => (action) => {
+  // RTK Query uses `createAsyncThunk` from redux-toolkit under the hood, so we're able to utilize these matchers!
+  if (isRejectedWithValue(action)) {
+    console.log('isRejectedWithValue', action.error, action.payload);
+    alert(JSON.stringify(action.error)); // This is just an example. You can replace it with your preferred method for displaying notifications.
+  }
+
+  return next(action);
+};
+
 const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
@@ -36,7 +49,7 @@ const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat([rtkBaseUrl1Api.middleware, rtkBaseUrl2Api.middleware]),
+    }).concat([rtkBaseUrl1Api.middleware, rtkBaseUrl2Api.middleware, rtkQueryErrorLogger]), // Integrate rtkQueryErrorLogger middleware here
   enhancers: getEnhancers,
 });
 

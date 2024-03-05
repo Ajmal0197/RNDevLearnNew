@@ -46,15 +46,18 @@ export const rtkBaseUrl1Api = createApi({
     }),
     // Define endpoint for creating new user
     createCart: builder.mutation({
-      query: (body) => ({
-        url: '/add',
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body,
-      }),
+      query: ({ body, navigation }) => {
+        console.log('firstfirstfirstfirstfirst111', body, navigation);
+        return {
+          url: '/add',
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body,
+        };
+      },
       invalidatesTags: ['Cart'], // invalidates/refetch all queries with the tag 'Carts'
       transformResponse: (response, meta, arg) => {
-        console.log('transformResponsetransformResponse', response?.products);
+        console.log('transformResponsetransformResponse', meta, arg);
         return response;
       },
       // The 2nd parameter is the destructured `QueryLifecycleApi`
@@ -62,9 +65,9 @@ export const rtkBaseUrl1Api = createApi({
         arg,
         { dispatch, getState, extra, requestId, queryFulfilled, getCacheEntry, updateCachedData }
       ) {
-        console.log('onQueryStartedonQueryStarted000', arg, getState()?.cake);
+        console.log('onQueryStartedonQueryStarted000', await queryFulfilled, arg, getState()?.cake);
       },
-      // The 2nd parameter is the destructured `QueryCacheLifecycleApi`
+      // OPtional
       async onCacheEntryAdded(
         arg,
         {
@@ -95,7 +98,7 @@ export const rtkBaseUrl1Api = createApi({
     // Define endpoint for deleting user
     deleteCart: builder.mutation({
       query: (userId) => ({
-        url: `${userId}`,
+        url: `${1000000}`,
         method: 'DELETE',
       }),
     }),
