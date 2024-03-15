@@ -118,7 +118,10 @@ STEPS:
 2. https://rnfirebase.io/messaging/usage
 3. https://rnfirebase.io/messaging/usage#foreground-state-messages
 4. https://rnfirebase.io/messaging/notifications#handling-interaction
-5. https://reactnavigation.org/docs/deep-linking & https://reactnavigation.org/docs/configuring-links
+5. https://thoughtbot.com/blog/implementing-deep-linking-in-react-native-a-quick-step-by-step-guide
+6. https://reactnavigation.org/docs/deep-linking/#set-up-with-bare-react-native-projects 
+// npx uri-scheme open "myapp://post/111" --android //will work in real device only
+
 
 /Test: 
 https://testfcm.com/
