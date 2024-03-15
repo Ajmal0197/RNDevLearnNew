@@ -3,7 +3,11 @@ import { Linking, ActivityIndicator, View, Text, Alert } from 'react-native';
 import messaging from '@react-native-firebase/messaging';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { requestUserPermission } from './utils/notificationService';
+import {
+  getFCMToken,
+  registerListenerWithFCM,
+  requestUserPermission,
+} from './utils/NotificationService';
 
 const Stack = createNativeStackNavigator();
 const NAVIGATION_IDS = ['home', 'post', 'settings'];
@@ -87,13 +91,10 @@ const PostScreen = ({ route }) => {
 
 function App() {
   useEffect(() => {
-    // notification permission request and get token
-    requestUserPermission();
+    getFCMToken(); // initiate api permission and fetch token
 
-    // Foreground Service (for Notifee usage ref: src/srcFirebase/firebase/notificationConfiguration/index.js)
-    const unsubscribe = messaging().onMessage(async (remoteMessage) => {
-      Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
-    });
+    // Register foreground notification handler
+    const unsubscribe = registerListenerWithFCM();
     return unsubscribe;
   }, []);
 
