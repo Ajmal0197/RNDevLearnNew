@@ -19,7 +19,7 @@ import { navigateFromNotificationEvent } from './src/srcFirebase/firebase/notifi
 // import App from './src/srcRNGiftedChat/App';
 // import App from './src/srcLinkingDeeplinking/App';
 // import App from './src/srcReduxToolkit/App';
-import App from './src/srcReduxToolkit/reduxRTKQuery/App';
+// import App from './src/srcReduxToolkit/reduxRTKQuery/App';
 // import App from './src/srcFirebase/App';
 // import App from './src/srcFirebaseDeeplinkNotifRedirect/App';
 // import App from './src/srcMultipleEnvConfig/App';
@@ -45,6 +45,7 @@ import App from './src/srcReduxToolkit/reduxRTKQuery/App';
 // import { A_Component, B_Navigation, C_Redux } from './src/srcTypescript';
 // import App from './src/srcRNUnistyles/App';
 // import App from './src/srcNativeBridging/App';
+import App from './src/srcRealmDB/App';
 
 // Register background handler ; ref: https://rnfirebase.io/messaging/usage#background--quit-state-messages
 messaging().setBackgroundMessageHandler(async (remoteMessage) => {

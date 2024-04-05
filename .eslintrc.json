@@ -19,6 +19,7 @@
     "react/jsx-props-no-spreading": "off",
     "arrow-body-style": "off",
     "no-console": "off",
+    "import/prefer-default-export": "off",
 
     // allow .js files to contain JSX code
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
