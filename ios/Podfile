@@ -34,7 +34,7 @@ setup_permissions([
  # 'StoreKit',
 ])
 
-platform :ios, min_ios_version_supported
+platform :ios, 13.4
 prepare_react_native_project!
 
 # flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled

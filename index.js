@@ -45,7 +45,8 @@ import { navigateFromNotificationEvent } from './src/srcFirebase/firebase/notifi
 // import { A_Component, B_Navigation, C_Redux } from './src/srcTypescript';
 // import App from './src/srcRNUnistyles/App';
 // import App from './src/srcNativeBridging/App';
-import App from './src/srcRealmDB/App';
+// import App from './src/srcRealmDB/App';
+import App from './src/srcReactNativeReanimated';
 
 // Register background handler ; ref: https://rnfirebase.io/messaging/usage#background--quit-state-messages
 messaging().setBackgroundMessageHandler(async (remoteMessage) => {
