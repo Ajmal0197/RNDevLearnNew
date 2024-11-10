@@ -7,10 +7,10 @@
 //  */
 
 import React, { useEffect } from 'react';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import { persistStore } from 'redux-persist';
 import BootSplash from 'react-native-bootsplash';
+import { Provider } from 'react-redux';
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
 import rtkStore from './reduxToolkit/store';
 import HomeScreen from './screens/home';
 

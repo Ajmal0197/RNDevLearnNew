@@ -1,7 +1,7 @@
-import Reactotron, { asyncStorage } from 'reactotron-react-native';
-import { reactotronRedux } from 'reactotron-redux';
-import mmkvPlugin from 'reactotron-react-native-mmkv';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Reactotron from 'reactotron-react-native';
+import mmkvPlugin from 'reactotron-react-native-mmkv';
+import { reactotronRedux } from 'reactotron-redux';
 import { storage } from '../../constants/constants';
 
 Reactotron.useReactNative()
